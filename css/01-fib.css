@@ -1,6 +1,5 @@
 /* FIBONACCI PAGE STYLES */
 
-
 /* HEADER AND DESCRIPTION TEXT */
 
 h1,
@@ -10,7 +9,9 @@ p {
 }
 
 h1 {
-  font-size: 64px;
+
+  font-size: 48px;
+
 }
 
 p {

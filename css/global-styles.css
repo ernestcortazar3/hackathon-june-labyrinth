@@ -5,6 +5,28 @@
   padding: 0;
 }
 
+
+/* RETURN TO THE LABYRINTH BUTTON */
+
+.return-button {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  gap: 5px;
+  position: fixed;
+  margin: 20px;
+  border: 1px solid black;
+  width: 100px;
+  height: 70px;
+  font-size: 16px;
+}
+
+.return-button > span {
+  text-align: center;
+  font-size: 16px;
+}
+
 body > div#page-content {
   display: flex;
   flex-direction: column;
@@ -13,7 +35,7 @@ body > div#page-content {
   flex-direction: column;
   align-items: center;
   justify-content: center;
-  gap: 40px;
+  gap: 20px;
 }
 
 .elevated-container {
