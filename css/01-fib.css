@@ -1,0 +1,94 @@
+/* FIBONACCI PAGE STYLES */
+
+/* PAGE CONTENT CONTAINER */
+
+#page-content {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  height: 100vh;
+  gap: 40px;
+  margin: 20px 20px 100px;
+}
+
+/* HEADER AND DESCRIPTION TEXT */
+
+h1 {
+  font-size: 72px;
+}
+
+p {
+  font-size: 32px;
+  text-align: center;
+  padding: 0 5%;
+}
+
+/* GROUP CONTAINER - [.elevated > global-styles.css] - HOLDS "CARDS" */
+
+#fib-cards {
+  display: flex;
+  width: 90%;
+  height: 50vh;
+  border: 1px solid black;
+  align-items: center;
+}
+
+/* "CARD": HOLDS NUMBER AND ICONS */
+
+/* div.hint {
+  display: none;
+}
+
+.hint-text {
+  display: none;
+} */
+
+.fib-card {
+  display: flex;
+  flex-direction: column;
+  width: 20%;
+  /* min-width: 123px; */
+  /* max-width: 198px; */
+  height: 80%;
+  justify-content: center;
+  align-items: center;
+  border: 1px solid black;
+  margin: 20px;
+}
+
+/* NUMBER CONTENT */
+
+.fib-number-content {
+  display: flex;
+  border: 1px solid black;
+  width: 90%;
+  height: 40%;
+  margin: 10px;
+  justify-content: center;
+  align-items: center;
+  font-size: 5vh;
+}
+
+/* ICONS // BUTTONS */
+
+.fib-icons {
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+  gap: 10px;
+  border: 1px solid black;
+  width: 90%;
+}
+
+.fib-icons > button {
+  display: flex;
+  margin: 5px;
+  align-items: center;
+  border: 1px solid black;
+  background-color: transparent;
+}
+
+.fib-icons i {
+  font-size: 4vh;
+}

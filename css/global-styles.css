@@ -1,0 +1,16 @@
+/* GLOBAL STYLES */
+
+* {
+  margin: 0;
+  padding: 0;
+}
+
+.elevated-container {
+  box-shadow: 10px 10px 15px rgba(0, 0, 0, 0.5);
+}
+
+/* TEST BACKGROUND IMAGE */
+
+/* body {
+  background-image: url(/assets/backgroundTile.jpg);
+} */
