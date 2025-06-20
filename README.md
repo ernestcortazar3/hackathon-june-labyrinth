@@ -167,12 +167,23 @@ Click "Compare & Pull Request".
 
 Tag teammates for review.
 Once approved, merge into the main branch [*See Merging Branches below*]
+This is done in GitHub website.
 
 ### 7. Resuming work
 
 After your commits have been merged to the main branch, pull from the main branch before resuming work to make sure everything is up to date.
 
-> git pull
+> git checkout main
+> Switches selected branch to the main branch
+
+> git pull origin main
+> Pulls most up-to-date from main remote branch to local.
+
+> git branch -f 'branch-name' main
+> Forces branch 'branch-name' to move to defined location (main).
+
+> git checkout 'branch-name'
+> Switches selected branch back to working branch.
 
 ### Repeat steps 3 - 7!
 

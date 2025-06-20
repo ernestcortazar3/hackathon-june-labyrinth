@@ -26,13 +26,19 @@ GitHub pull, start of workflow:
 - [ ] Define Puzzles for each room.
 - [ ] Define what item will open what door from Home/Labyrinth page.
 - [ ] Build:
+
   - [ ] Start page
     - [ ] Welcome
     - [ ] Info / description of game.
     - [ ] Easy, Med, Hard buttons
     - [ ] Start
   - [ ] Home/Labyrinth page 00-home.html
+
     - [ ] 4 puzzle doors, one grand giant door for finished puzzle
     - [ ] Finish Footer
+
+          [ ] fire room
+          [ ] air room
+          [ ] water room
 
 Add anything else to do here:
