@@ -5,91 +5,6 @@
   padding: 0;
 }
 
-/* RETURN TO THE LABYRINTH BUTTON */
-
-.return-button {
-  display: flex;
-  flex-direction: column;
-  justify-content: center;
-  align-items: center;
-  gap: 5px;
-  position: fixed;
-  margin: 20px;
-  border: 1px solid black;
-  width: 100px;
-  height: 70px;
-  font-size: 16px;
-}
-
-.return-button > span {
-  text-align: center;
-  font-size: 16px;
-}
-
-body > div#page-content {
-  display: flex;
-  flex-direction: column;
-  height: calc(100vh - 80px);
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-  justify-content: center;
-  gap: 20px;
-}
-
-/* RETURN TO THE LABYRINTH BUTTON */
-
-.return-button {
-  display: flex;
-  flex-direction: column;
-  justify-content: center;
-  align-items: center;
-  gap: 5px;
-  position: fixed;
-  margin: 20px;
-  border: 1px solid black;
-  width: 100px;
-  height: 70px;
-  font-size: 16px;
-}
-
-.return-button > span {
-  text-align: center;
-  font-size: 16px;
-}
-
-body > div#page-content {
-  display: flex;
-  flex-direction: column;
-  height: calc(100vh - 80px);
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-  justify-content: center;
-  gap: 20px;
-}
-
-/* RETURN TO THE LABYRINTH BUTTON */
-
-.return-button {
-  display: flex;
-  flex-direction: column;
-  justify-content: center;
-  align-items: center;
-  gap: 5px;
-  position: fixed;
-  margin: 20px;
-  border: 1px solid black;
-  width: 100px;
-  height: 70px;
-  font-size: 16px;
-}
-
-.return-button > span {
-  text-align: center;
-  font-size: 16px;
-}
-
 body > div#page-content {
   display: flex;
   flex-direction: column;
@@ -105,23 +20,43 @@ body > div#page-content {
   box-shadow: 10px 10px 15px rgba(0, 0, 0, 0.5);
 }
 
+/* RETURN TO THE LABYRINTH BUTTON */
+
+.return-button {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  gap: 5px;
+  position: fixed;
+  margin: 20px;
+  border: 1px solid black;
+  width: 100px;
+  height: 70px;
+  font-size: 16px;
+}
+
+.return-button > span {
+  text-align: center;
+  font-size: 16px;
+}
+
 /* FOOTER */
 
 footer {
-  background-color: blue;
+  background-color: #bbb;
   position: fixed;
   width: 100%;
   height: 80px;
   display: flex;
   flex-direction: row;
   justify-content: space-between;
+  box-shadow: -2px -5px 10px rgba(0, 0, 0, 0.5);
 }
 
 .item-inventory {
   display: flex;
   justify-content: space-evenly;
-  /* border: 1px solid black;
-  background-color: white; */
   height: 60px;
   width: 700px;
   margin: 10px 0;
@@ -131,8 +66,13 @@ div.item {
   width: 60px;
   height: 60px;
   font-size: 60px;
-  border: 1px solid black;
   text-align: center;
+  color: #ccc;
+  text-shadow: 2px 2px 5px rgba(0, 0, 0, 0.5);
+}
+
+div.item.active {
+  color: #fff;
 }
 
 .difficulty-selection-container {

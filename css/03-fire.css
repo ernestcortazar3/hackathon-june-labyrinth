@@ -1,0 +1,16 @@
+/* FIRE STYLES */
+
+.image-container {
+  display: flex;
+  flex-wrap: wrap;
+  border: 1px solid black;
+  width: 815px;
+  height: 815px;
+  gap: 5px;
+  padding: 5px;
+}
+
+div.image-container > div {
+  width: 200px;
+  height: 200px;
+}
