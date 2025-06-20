@@ -4,9 +4,65 @@
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=, initial-scale=1.0" />
     <link rel="stylesheet" href="/css/global-styles.css" />
+    <link rel="stylesheet" href="/css/00-home.css" />
+    <script
+      src="https://kit.fontawesome.com/9186a02cc8.js"
+      crossorigin="anonymous"
+    ></script>
+
     <title>Labyrinth</title>
   </head>
+  <!-- GAME ROOT PAGE // MAIN LABYRINTH // DOOR SELECTION-->
   <body>
-    <!-- GAME ROOT PAGE // MAIN LABYRINTH // DOOR SELECTION-->
+    <!-- PAGE CONTENT CONTAINER -->
+    <div id="page-content">
+      <!-- START PAGE CONTENT -->
+      <h1>TEST</h1>
+      <p>Welcome to the Labyrinth! Choose a door to begin your adventure.</p>
+      <a href="/pages/01-fib.html" class="door door-1">
+        <i class="fa-solid fa-door-open"></i>
+        <span>Door 1</span></a
+      >
+
+      <!-- END PAGE CONTENT -->
+    </div>
+    <!-- FOOTER -->
+    <footer>
+      <div class="item-inventory">
+        <div class="item">
+          <i class="fa-solid fa-glass-water-droplet"></i>
+        </div>
+        <div class="item">
+          <i class="fa-solid fa-water"></i>
+        </div>
+        <div class="item">
+          <i class="fa-solid fa-key"></i>
+        </div>
+        <div class="item">
+          <i class="fa-solid fa-gem"></i>
+        </div>
+        <div class="item">
+          <i class="fa-solid fa-leaf"></i>
+        </div>
+        <div class="item">
+          <i class="fa-solid fa-fire-flame-curved"></i>
+        </div>
+        <div class="item">
+          <i class="fa-solid fa-puzzle-piece"></i>
+        </div>
+        <div class="item">
+          <i class="fa-solid fa-bolt"></i>
+        </div>
+        <div class="item">
+          <i class="fa-regular fa-sun"></i>
+        </div>
+      </div>
+      <!-- ITEMS ^ | DIFFICULTY -->
+      <div class="difficulty-selection-container">
+        <div id="easy" class="difficulty-mode">easy</div>
+        <div id="medium" class="difficulty-mode">medium</div>
+        <div id="hard" class="difficulty-mode">hard</div>
+      </div>
+    </footer>
   </body>
 </html>
