@@ -73,13 +73,7 @@ Thanks to ChatGPT for helping make this process visual and a bit easier to diges
 
 ### BASIC GIT COMMANDS
 
-Here are the basic commands used while in the github repo in TERMINAL.
-! MAKE SURE YOUR TERMINAL STARTS WITH THE GITHUB REPO IN CMD LINE!
-
-**cmd line should look like this:**
-➜ hackathon-june git:(test-branch) >`insert command here
-
-> git clone https://github.com/your-username/project-name.git
+> git clone *https://github.com/your-username/project-name.git*
 
 Purpose:
 Downloads the entire repository (project folder) from GitHub to your local computer.
@@ -89,10 +83,16 @@ Think of it as making your own working copy of the project.
 
 Purpose:
 Creates a new branch and switches to it.
-!!! Make sure to edit the 'your-name-feature-name' line.
+
+**Make sure to edit the 'your-name-feature-name' line.**
 
 _Why branches?_
+
 **So you can safely work on your own feature without affecting the main project until your work is ready to be merged.**
+
+**_cmd line should look like this:_**
+
+➜ hackathon-june git:(test-branch) >`insert command here
 
 > git add .
 
