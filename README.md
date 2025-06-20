@@ -90,9 +90,9 @@ _Why branches?_
 
 **So you can safely work on your own feature without affecting the main project until your work is ready to be merged.**
 
-**_cmd line should look like this:_**
+**_cmd line in TERMINAL should now look like this:_**
 
-➜ hackathon-june git:(test-branch) >`insert command here
+➜ hackathon-june git:(your-name-feature-name) > insert command here
 
 > git add .
 
