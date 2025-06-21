@@ -18,7 +18,7 @@ p {
 
 /* GROUP CONTAINER - [.elevated > global-styles.css] - HOLDS "CARDS" */
 
-#fib-cards {
+#fib-cards-container {
   display: flex;
   width: 90%;
   height: 50vh;
