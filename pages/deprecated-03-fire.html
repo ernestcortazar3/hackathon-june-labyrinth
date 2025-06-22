@@ -1,0 +1,65 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="stylesheet" href="/css/03-fire.css" />
+    <link rel="stylesheet" href="/css/global-styles.css" />
+    <script
+      src="https://kit.fontawesome.com/9186a02cc8.js"
+      crossorigin="anonymous"
+    ></script>
+    <title>FIRE</title>
+  </head>
+  <body>
+    <!-- RETURN TO THE LABYRINTH -->
+    <a href="/pages/00-home.html">
+      <div class="return-button">
+        <span class="return-text">Return to the Labyrinth</span>
+        <i class="fa-regular fa-share-from-square"></i>
+      </div>
+    </a>
+    <!-- PAGE CONTENT -->
+    <div id="page-content">
+      <h1>Solve the Puzzle</h1>
+      <p>Return the Image to it's original state.</p>
+      <div
+        id="fire-grid"
+        class="image-container elevated-container"
+        tabindex="0"
+      ></div>
+      <!-- END IMAGE CONTAINER -->
+    </div>
+
+    <!-- FOOTER -->
+    <footer>
+      <div class="item-inventory">
+        <div class="item">
+          <i class="fa-solid fa-leaf"></i>
+        </div>
+        <div class="item">
+          <i class="fa-solid fa-wind"></i>
+        </div>
+        <div class="item">
+          <i class="fa-solid fa-fire-flame-curved"></i>
+        </div>
+        <div class="item">
+          <i class="fa-solid fa-water"></i>
+        </div>
+        <div class="item">
+          <!-- BLANK CONTAINER -->
+        </div>
+        <div class="item">
+          <i class="fa-solid fa-key"></i>
+        </div>
+      </div>
+      <!-- ITEMS ^ | DIFFICULTY -->
+      <div class="difficulty-selection-container">
+        <div id="easy" class="difficulty-mode">easy</div>
+        <div id="medium" class="difficulty-mode">medium</div>
+        <div id="hard" class="difficulty-mode">hard</div>
+      </div>
+    </footer>
+    <script src="../js/03-fire.js" type="module"></script>
+  </body>
+</html>

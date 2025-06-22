@@ -6,31 +6,31 @@ grid.addEventListener("keydown", (e) => {
   renderGrid();
 });
 
-const positions = [
-  "1",
-  "2",
-  "3",
-  "4",
-  "5",
-  "6",
-  "7",
-  "8",
-  "9",
+const currentSlidPos = [
+  "01",
+  "02",
+  "03",
+  "04",
+  "05",
+  "06",
+  "07",
+  "08",
+  "09",
   "10",
   "11",
   "12",
   "13",
   "14",
-  "15",
   "",
+  "15",
 ];
 const renderGrid = () => {
   grid.innerHTML = "";
-  for (let i = 0; i < positions.length; i++) {
-    const text = document.createTextNode(positions[i]);
+  for (let i = 0; i < currentSlidPos.length; i++) {
     const slot = document.createElement("div");
     slot.classList.add("grid-slot");
-    slot.appendChild(text);
+    slot.style = `background-image: url(../assets/fire_tiles/${currentSlidPos[i]}-fire.jpg)`;
+    slot.alt = `fire-${i + 1}`;
     grid.appendChild(slot);
   }
 };
@@ -41,12 +41,14 @@ const getCoordinates = (position) => {
   return [x, y];
 };
 const getEmptySlotCoordinates = () => {
-  for (let i = 0; i < positions.length; i++) {
-    if (positions[i] === "") return getCoordinates(i);
+  for (let i = 0; i < currentSlidPos.length; i++) {
+    if (currentSlidPos[i] === "") return getCoordinates(i);
   }
 };
 //will save the empty position to avoid search fot it all the time
-let currentEmptyPosition = positions.findIndex((element, i) => element === "");
+let currentEmptyPosition = currentSlidPos.findIndex(
+  (element, i) => element === ""
+);
 //same as coordinates
 let currentEmptyCoordinates = getEmptySlotCoordinates();
 
@@ -81,9 +83,9 @@ const tryToSwitchPositions = (move) => {
   const coordinateToMove = getCoordinatesToMove(move);
   const positionToMove = getPositionByCoordinate(coordinateToMove);
   if (coordinateToMove[0] !== -1 && coordinateToMove[1] !== -1) {
-    const tempPositionToChange = positions[currentEmptyPosition];
-    positions[currentEmptyPosition] = positions[positionToMove];
-    positions[positionToMove] = tempPositionToChange;
+    const tempPositionToChange = currentSlidPos[currentEmptyPosition];
+    currentSlidPos[currentEmptyPosition] = currentSlidPos[positionToMove];
+    currentSlidPos[positionToMove] = tempPositionToChange;
     currentEmptyCoordinates = coordinateToMove;
     currentEmptyPosition = positionToMove;
   }
