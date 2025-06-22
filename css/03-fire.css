@@ -1,6 +1,6 @@
 /* FIRE STYLES */
 
-.image-container {
+/* .image-container {
   display: flex;
   flex-wrap: wrap;
   border: 1px solid black;
@@ -13,4 +13,20 @@
 div.image-container > div {
   width: 200px;
   height: 200px;
+} */
+
+#fire-grid {
+  display: grid;
+  grid-template-columns: repeat(4, 1fr);
+  aspect-ratio: 1/1;
+  gap: 2px;
+  width: 30vw;
+}
+
+.grid-slot {
+  background-color: red;
+  border: 1px solid black;
+  display: flex;
+  justify-content: center;
+  align-items: center;
 }
