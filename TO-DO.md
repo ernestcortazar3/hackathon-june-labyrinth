@@ -20,25 +20,21 @@ GitHub pull, start of workflow:
 
 - [x] Define what item given from what room.
 
-1. EARTH ROOM - will give WIND/AIR element
+1. WATER ROOM - Color Sort Puzzle / game
 
-- Puzzle: Fibonacci sequence
-- Hint: Will give you the order for the torch room
+- GIVES WATER ELEMENT, and will give clue for FIBONNACCI PUZZLE
 
-2. AIR ROOM - will give you FIRE element
+2. EARTH ROOM - Needs Water Element to Open - Fibonnacci Puzzle
 
-- Puzzle: Torch lighting
-- Hint: Will give you clue for FIRE. "Move images around" or somehting
+- GIVES EARTH ELEMENT, and will give clue for TORCH PUZZLE
 
-3. FIRE ROOM - will give you WATER element
+3. FIRE ROOM - Needs Earth Element to Open - Torch Puzzle
 
-- Puzzle: FIRE image shuffle
-- Hint: Will give you clue for WATER room.
+- GIVES FIRE ELEMENT, and give clue to how to clear the "air" in air room
 
-4. WATER ROOM - will give you the master key to open the final door
+4. AIR ROOM - blackout room - some sort of puzzle to 'CLEAN THE AIR" to see the IMAGE PUZZLE
 
-- Puzzle: Rock paper scissors. Beat the computer.
-- No hint; will give you the master key to escape the Labyrinth.
+- GIVES MASTER KEY to exit the ESCAPE ROOM MASTER DOOR
 
 - [x] Create .html files for each room.
 - [x] Create .css files for each room style.
@@ -49,14 +45,25 @@ GitHub pull, start of workflow:
 - [ ] Build:
 
   - [ ] Start page
-    - [ ] Welcome
-    - [ ] Info / description of game.
-    - [ ] Easy, Med, Hard buttons
-    - [ ] Start
-    - [ ] START out with Earth element to open the FIRST Door
-  - [x] Home/Labyrinth page 00-home.html
+  - [ ] Welcome
+  - [ ] Info / description of game.
+  - [ ] Easy, Med, Hard buttons
+  - [ ] Start
+  - [ ] START out with Earth element to open the FIRST Door
 
-    - [ ] 4 puzzle doors, one grand giant door for finished puzzle
-    - [x] Finish Footer
+- [ ] Home/Labyrinth page 00-home.html
+- [ ] water room / color sort puzzle
+- [ ] air room update image puzzle to key image
+- [ ] FIRE ROOM now will be torch puzzle
+- [ ] Build Torch Room
+- [ ] 4 puzzle doors, one grand giant door for finished puzzle
+- [x] Finish Footer
 
-Add anything else to do here:
+STYLES
+
+- [ ] GLOBAL STYLES / INDEX.html
+- [ ] 00 - HOME PAGE
+- [ ] EARTH - FIBONACCI
+- [ ] WATER - COLOR SORT
+- [ ] FIRE - TORCH ROOM
+- [ ] AIR - IMAGE PUZZLE
