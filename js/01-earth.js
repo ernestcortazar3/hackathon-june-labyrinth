@@ -1,7 +1,9 @@
-import { rightFibonacciAnswer, whereToGoAfterFibonacci } from "./globals.js";
-const currentFibonacciInput = JSON.parse(
-  localStorage.getItem("currentFibonacciInput")
-);
+import { initFibonacciInput, rightFibonacciAnswer } from "./globals.js";
+const currentFibonacciInput =
+  JSON.parse(localStorage.getItem("currentFibonacciInput")) ||
+  initFibonacciInput();
+
+const userItems = localStorage.getItem("userItems") || initUserItems();
 
 //get the total of fibonacci numbers containers
 const spanContainers = document.getElementsByClassName("fib-number-content");
@@ -32,7 +34,6 @@ const checkAnswer = () => {
       return false;
     }
   }
-  earthCompleted();
   return true;
 };
 
@@ -40,13 +41,26 @@ const checkAnswer = () => {
  * after puzzle was solved remove digits and fill the container
  */
 const earthCompleted = () => {
-  const container = document.getElementById("fib-cards-container");
-  while (container.firstChild) {
-    container.removeChild(container.firstChild);
+  const container = document.getElementById("page-content");
+  container.innerHTML = "";
+  const rewardContainer = document.createElement("div");
+  rewardContainer.classList.add("reward-container");
+  const rewardIcon = document.createElement("i");
+  rewardIcon.classList.add("fa-solid", "fa-fire-flame-curved", "reward-Item");
+  rewardIcon.addEventListener("click", () => {
+    userItems[2].userHasItem = true;
+    localStorage.setItem("userItems", userItems);
+  });
+  const messageBeforeGrab = document.createElement("div");
+  messageBeforeGrab.innerHTML = "This test was already passed, grab your price";
+  const messageAfterGrab = document.createElement("div");
+  messageAfterGrab.innerHTML = "This test was already passed";
+  if (userItems[2].userHasItem) {
+    container.appendChild(messageAfterGrab);
+  } else {
+    container.appendChild(rewardIcon);
+    container.appendChild(messageBeforeGrab);
   }
-  const solved = document.createElement("span");
-  solved.innerHTML = "This test was already passed";
-  container.appendChild(solved);
 };
 
 /**
@@ -65,7 +79,7 @@ const addListeners = () => {
         JSON.stringify(currentFibonacciInput)
       );
       if (checkAnswer()) {
-        window.location.href = "03-fire.html";
+        earthCompleted();
       }
     });
     const decreaseBtn = document.getElementById(`fib-decrease-${i + 1}`);
@@ -80,12 +94,14 @@ const addListeners = () => {
           JSON.stringify(currentFibonacciInput)
         );
         if (checkAnswer()) {
-          window.location.href = whereToGoAfterFibonacci;
+          earthCompleted();
         }
       }
     });
   }
 };
-checkAnswer();
 initNumbers();
 addListeners();
+if (checkAnswer() || userItems[2].userHasItem) {
+  earthCompleted();
+}
