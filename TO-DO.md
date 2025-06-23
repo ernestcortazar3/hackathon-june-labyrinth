@@ -18,13 +18,34 @@ GitHub pull, start of workflow:
 
 ## Create defined paths for puzzles / pages.
 
-- [ ] Define what item given from what room.
-- [ ] Create .html files for each room.
-- [ ] Create .css files for each room style.
-- [ ] Select icons for item inventory and incorporate into Global Footer
+- [x] Define what item given from what room.
+
+1. EARTH ROOM - will give WIND/AIR element
+
+- Puzzle: Fibonacci sequence
+- Hint: Will give you the order for the torch room
+
+2. AIR ROOM - will give you FIRE element
+
+- Puzzle: Torch lighting
+- Hint: Will give you clue for FIRE. "Move images around" or somehting
+
+3. FIRE ROOM - will give you WATER element
+
+- Puzzle: FIRE image shuffle
+- Hint: Will give you clue for WATER room.
+
+4. WATER ROOM - will give you the master key to open the final door
+
+- Puzzle: Rock paper scissors. Beat the computer.
+- No hint; will give you the master key to escape the Labyrinth.
+
+- [x] Create .html files for each room.
+- [x] Create .css files for each room style.
+- [x] Select icons for item inventory and incorporate into Global Footer
 - [ ] Create text content for rooms and hints.
-- [ ] Define Puzzles for each room.
-- [ ] Define what item will open what door from Home/Labyrinth page.
+- [x] Define Puzzles for each room.
+- [x] Define what item will open what door from Home/Labyrinth page.
 - [ ] Build:
 
   - [ ] Start page
@@ -32,14 +53,11 @@ GitHub pull, start of workflow:
     - [ ] Info / description of game.
     - [ ] Easy, Med, Hard buttons
     - [ ] Start
-  - [ ] Home/Labyrinth page 00-home.html
+    - [ ] START out with Earth element to open the FIRST Door
+  - [x] Home/Labyrinth page 00-home.html
 
     - [ ] 4 puzzle doors, one grand giant door for finished puzzle
-    - [ ] Finish Footer
-
-          [ ] fire room
-          [ ] air room
-          [ ] water room
+    - [x] Finish Footer
 
 <<<<<<< HEAD
 =======

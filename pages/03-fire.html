@@ -3,192 +3,29 @@
   <head>
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <link rel="stylesheet" href="/css/03-fire.css" />
-    <link rel="stylesheet" href="/css/global-styles.css" />
+    <title>The Fire Room</title>
+    <link rel="stylesheet" href="../css/03-fire.css" />
+    <link rel="stylesheet" href="../css/global-styles.css" />
     <script
       src="https://kit.fontawesome.com/9186a02cc8.js"
       crossorigin="anonymous"
     ></script>
-    <title>FIRE</title>
   </head>
   <body>
-    <!-- RETURN TO THE LABYRINTH -->
-    <a href="/pages/00-home.html">
-      <div class="return-button">
-        <span class="return-text">Return to the Labyrinth</span>
-        <i class="fa-regular fa-share-from-square"></i>
-      </div>
-    </a>
-    <!-- PAGE CONTENT -->
-    <div id="page-content">
+    <header class="header">here will be some icons</header>
+    <div class="fire-container">
       <h1>Solve the Puzzle</h1>
       <p>Return the Image to it's original state.</p>
-      <div class="image-container elevated-container">
-        <!-- ROW ONE -->
-        <div class="image-square-01">
-          <img
-            src="/assets/fire_tiles/01-fire.jpg"
-            alt="01"
-            width="200px"
-            height="200px"
-          />
-        </div>
-        <div class="image-square-02">
-          <img
-            src="/assets/fire_tiles/02-fire.jpg"
-            alt="02"
-            width="200px"
-            height="200px"
-          />
-        </div>
-        <div class="image-square-03">
-          <img
-            src="/assets/fire_tiles/03-fire.jpg"
-            alt="03"
-            width="200px"
-            height="200px"
-          />
-        </div>
-        <div class="image-square-04">
-          <img
-            src="/assets/fire_tiles/04-fire.jpg"
-            alt="04"
-            width="200px"
-            height="200px"
-          />
-        </div>
-        <!-- ROW TWO -->
-        <div class="image-square-05">
-          <img
-            src="/assets/fire_tiles/05-fire.jpg"
-            alt="05"
-            width="200px"
-            height="200px"
-          />
-        </div>
-        <div class="image-square-06">
-          <img
-            src="/assets/fire_tiles/06-fire.jpg"
-            alt="06"
-            width="200px"
-            height="200px"
-          />
-        </div>
-        <div class="image-square-07">
-          <img
-            src="/assets/fire_tiles/07-fire.jpg"
-            alt="07"
-            width="200px"
-            height="200px"
-          />
-        </div>
-        <div class="image-square-08">
-          <img
-            src="/assets/fire_tiles/08-fire.jpg"
-            alt="08"
-            width="200px"
-            height="200px"
-          />
-        </div>
-        <!-- ROW THREE -->
-        <div class="image-square-09">
-          <img
-            src="/assets/fire_tiles/09-fire.jpg"
-            alt="09"
-            width="200px"
-            height="200px"
-          />
-        </div>
-        <div class="image-square-10">
-          <img
-            src="/assets/fire_tiles/10-fire.jpg"
-            alt="10"
-            width="200px"
-            height="200px"
-          />
-        </div>
-        <div class="image-square-11">
-          <img
-            src="/assets/fire_tiles/11-fire.jpg"
-            alt="11"
-            width="200px"
-            height="200px"
-          />
-        </div>
-        <div class="image-square-12">
-          <img
-            src="/assets/fire_tiles/12-fire.jpg"
-            alt="12"
-            width="200px"
-            height="200px"
-          />
-        </div>
-        <!-- ROW FOUR -->
-        <div class="image-square-13">
-          <img
-            src="/assets/fire_tiles/13-fire.jpg"
-            alt="13"
-            width="200px"
-            height="200px"
-          />
-        </div>
-        <div class="image-square-14">
-          <img
-            src="/assets/fire_tiles/14-fire.jpg"
-            alt="14"
-            width="200px"
-            height="200px"
-          />
-        </div>
-        <div class="image-square-15">
-          <img
-            src="/assets/fire_tiles/15-fire.jpg"
-            alt="15"
-            width="200px"
-            height="200px"
-          />
-        </div>
-        <div class="image-square-16">
-          <img
-            src="/assets/fire_tiles/16-fire.jpg"
-            alt="16"
-            width="200px"
-            height="200px"
-          />
-        </div>
-        <!-- END IMAGE -->
-      </div>
-      <!-- END IMAGE CONTAINER -->
+      <div
+        id="fire-grid"
+        class="image-container elevated-container"
+        tabindex="0"
+      ></div>
     </div>
-
-    <!-- FOOTER -->
     <footer>
-      <div class="item-inventory">
-        <div class="item">
-          <i class="fa-solid fa-leaf"></i>
-        </div>
-        <div class="item">
-          <i class="fa-solid fa-wind"></i>
-        </div>
-        <div class="item">
-          <i class="fa-solid fa-fire-flame-curved"></i>
-        </div>
-        <div class="item">
-          <i class="fa-solid fa-water"></i>
-        </div>
-        <div class="item">
-          <!-- BLANK CONTAINER -->
-        </div>
-        <div class="item">
-          <i class="fa-solid fa-key"></i>
-        </div>
-      </div>
-      <!-- ITEMS ^ | DIFFICULTY -->
-      <div class="difficulty-selection-container">
-        <div id="easy" class="difficulty-mode">easy</div>
-        <div id="medium" class="difficulty-mode">medium</div>
-        <div id="hard" class="difficulty-mode">hard</div>
-      </div>
+      <div id="item-inventory"></div>
     </footer>
+    <script src="../js/03-fire.js"></script>
+    <script src="../js/footerHandler.js"></script>
   </body>
 </html>
