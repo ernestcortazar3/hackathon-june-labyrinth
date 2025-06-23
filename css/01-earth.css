@@ -20,6 +20,8 @@ p {
 
 #fib-cards-container {
   display: flex;
+  justify-content: space-around;
+  align-items: center;
   width: 90%;
   height: 50vh;
   border: 1px solid black;
