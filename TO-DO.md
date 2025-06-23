@@ -59,8 +59,4 @@ GitHub pull, start of workflow:
     - [ ] 4 puzzle doors, one grand giant door for finished puzzle
     - [x] Finish Footer
 
-<<<<<<< HEAD
-=======
-
->>>>>>> 83bf3de5e2f1ed83262835a395f51200e729df9f
 Add anything else to do here:
