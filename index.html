@@ -8,15 +8,20 @@
   </head>
   <body>
     <!-- GAME START / WELCOME // GAME RULES / DESCRIPTION // EASY, MEDIUM, HARD MODE SELECTORS // START BUTTON-->
-    <p>Hi</p>
-    <p>hello</p>
-    <p>My name is Slim Shady</p>
-    <p>my name is WHO?</p>
-    <p>my name is WHAT?!?</p>
-    checkachecka slim shady
-    <a href="./pages/01-earth.html">EARTH</a>
-    <a href="./pages/03-fire.html">Fire</a>
-    <a href="./pages/04-water.html">Water</a>
+    <div id="index-page">
+      <div class="welcome-container">
+        <h1 class="index">Labyrinth of Elements</h1>
+        <p class="index">Select Your Difficulty</p>
+        <div class="index-buttons">
+          <button id="easy" class="difficulty-button">EASY</button>
+          <button id="medium" class="difficulty-button">MEDIUM</button>
+          <button id="hard" class="difficulty-button">HARD</button>
+        </div>
+        <a href="/pages/00-home.html"
+          ><button id="start" class="elevated">START</button></a
+        >
+      </div>
+    </div>
     <button id="restart-game">Restart Game</button>
     <script src="../js/globals.js" type="module"></script>
   </body>
