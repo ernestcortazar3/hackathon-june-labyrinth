@@ -1,9 +1,10 @@
-import { initUserItems } from "./globals.js";
+import { getUserItems } from "./globals.js";
 
 const savedItems =
-  JSON.parse(localStorage.getItem("userItems")) || initUserItems;
+  JSON.parse(localStorage.getItem("userItems")) || getUserItems();
 const itemContainer = document.getElementById("item-inventory");
-const renderFooter = () => {
+
+export const renderFooter = () => {
   itemContainer.innerHTML = "";
   for (let i = 0; i < savedItems.length; i++) {
     const item = savedItems[i];

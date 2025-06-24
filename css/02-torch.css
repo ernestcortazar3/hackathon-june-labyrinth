@@ -1,0 +1,56 @@
+body {
+  justify-content: space-between;
+  color: white;
+  background-color: black;
+}
+
+h1 {
+  font-size: 10vh;
+}
+
+.text-container {
+  display: flex;
+  flex-direction: column;
+  gap: 20px;
+  padding: 40px 0;
+}
+
+.image-container {
+  width: 100%;
+  display: flex;
+  flex-direction: row;
+  gap: 80px;
+  justify-content: space-between;
+  color: white;
+  background-color: black;
+}
+
+h1 {
+  font-size: 10vh;
+}
+
+.text-container {
+  display: flex;
+  flex-direction: column;
+  gap: 20px;
+  padding: 40px 0;
+}
+
+.image-container {
+  width: 100%;
+  display: flex;
+  flex-direction: row;
+  gap: 80px;
+  justify-content: center;
+  align-items: end;
+}
+
+.torch-stack {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+img {
+  border-radius: 0;
+}
