@@ -37,13 +37,18 @@ p {
 .liq-container {
   display: flex;
   border: 5px solid black;
-  flex-direction: column;
+  flex-direction: column-reverse;
   width: 100px;
   height: 500px;
   margin-top: 100px;
   margin-left: 200px;
   margin-right: 100px;
   margin-bottom: 100px;
+  border-bottom-left-radius: 25px;
+  border-bottom-right-radius: 25px;
+}
+
+.bottom {
   border-bottom-left-radius: 25px;
   border-bottom-right-radius: 25px;
 }
@@ -70,9 +75,4 @@ p {
   height: 125px;
   background-color: blue;
   border: 2px dashed rgb(0, 0, 75);
-}
-
-.bottom {
-  border-bottom-left-radius: 25px;
-  border-bottom-right-radius: 25px;
 }
