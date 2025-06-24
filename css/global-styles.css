@@ -14,11 +14,12 @@ body {
   align-items: center;
   justify-content: space-between;
   height: 100vh;
-  gap: 20px;
 }
 
-h1 {
+h1,
+h2 {
   font-family: "Cinzel Decorative", Geneva, Tahoma, sans-serif;
+  text-shadow: 2px 2px 3px black;
 }
 
 p {
@@ -31,6 +32,10 @@ p {
 
 .elevated {
   box-shadow: 2px 2px 5px rgba(0, 0, 0, 0.7);
+}
+
+img {
+  border-radius: 10px;
 }
 
 /* RETURN TO THE LABYRINTH BUTTON */
