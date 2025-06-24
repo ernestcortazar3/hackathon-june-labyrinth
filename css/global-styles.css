@@ -20,6 +20,7 @@ h1,
 h2 {
   font-family: "Cinzel Decorative", Geneva, Tahoma, sans-serif;
   text-shadow: 2px 2px 3px black;
+  text-align: center;
 }
 
 p {
