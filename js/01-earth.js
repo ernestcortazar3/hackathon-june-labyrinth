@@ -1,9 +1,16 @@
-import { initFibonacciInput, rightFibonacciAnswer } from "./globals.js";
+import { renderFooter } from "./footerHandler.js";
+import {
+  initFibonacciInput,
+  initUserItems,
+  rightFibonacciAnswer,
+} from "./globals.js";
 const currentFibonacciInput =
   JSON.parse(localStorage.getItem("currentFibonacciInput")) ||
   initFibonacciInput();
 
-const userItems = localStorage.getItem("userItems") || initUserItems();
+const userItems =
+  JSON.parse(localStorage.getItem("userItems")) || initUserItems();
+const container = document.getElementById("page-content");
 
 //get the total of fibonacci numbers containers
 const spanContainers = document.getElementsByClassName("fib-number-content");
@@ -37,30 +44,33 @@ const checkAnswer = () => {
   return true;
 };
 
+const onRewardClick = () => {
+  userItems[2].userHasItem = true;
+  console.log("icon clicked");
+  localStorage.setItem("userItems", JSON.stringify(userItems));
+  const messageAfterGrab = document.createElement("div");
+  messageAfterGrab.classList.add("grab-fire-message");
+  messageAfterGrab.innerHTML = "This test was already passed";
+  container.innerHTML = "";
+  container.appendChild(messageAfterGrab);
+  renderFooter();
+};
+
 /**
  * after puzzle was solved remove digits and fill the container
  */
 const earthCompleted = () => {
-  const container = document.getElementById("page-content");
   container.innerHTML = "";
   const rewardContainer = document.createElement("div");
   rewardContainer.classList.add("reward-container");
   const rewardIcon = document.createElement("i");
   rewardIcon.classList.add("fa-solid", "fa-fire-flame-curved", "reward-Item");
-  rewardIcon.addEventListener("click", () => {
-    userItems[2].userHasItem = true;
-    localStorage.setItem("userItems", userItems);
-  });
+  rewardIcon.addEventListener("click", onRewardClick);
   const messageBeforeGrab = document.createElement("div");
+  messageBeforeGrab.classList.add("grab-fire-message");
   messageBeforeGrab.innerHTML = "This test was already passed, grab your price";
-  const messageAfterGrab = document.createElement("div");
-  messageAfterGrab.innerHTML = "This test was already passed";
-  if (userItems[2].userHasItem) {
-    container.appendChild(messageAfterGrab);
-  } else {
-    container.appendChild(rewardIcon);
-    container.appendChild(messageBeforeGrab);
-  }
+  container.appendChild(rewardIcon);
+  container.appendChild(messageBeforeGrab);
 };
 
 /**

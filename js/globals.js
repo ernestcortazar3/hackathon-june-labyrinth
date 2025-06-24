@@ -1,7 +1,12 @@
 export const rightFibonacciAnswer = [1, 1, 1, 1];
 
-export const initUserItems = () => {
-  const userItems = [
+export const getUserItems = () => {
+  const storedUserItems = localStorage.getItem("userItems");
+  let userItems;
+  if (!storedUserItems) {
+  }
+
+  userItems = [
     {
       name: "leaf",
       icon: "fa-leaf",
