@@ -1,5 +1,8 @@
 /* GLOBAL STYLES */
 
+@import url("https://fonts.googleapis.com/css2?family=Cinzel+Decorative:wght@400;700;900&display=swap");
+@import url("https://fonts.googleapis.com/css2?family=Libre+Baskerville:ital,wght@0,400;0,700;1,400&display=swap");
+
 * {
   margin: 0;
   padding: 0;
@@ -11,11 +14,28 @@ body {
   align-items: center;
   justify-content: space-between;
   height: 100vh;
-  gap: 20px;
+}
+
+h1,
+h2 {
+  font-family: "Cinzel Decorative", Geneva, Tahoma, sans-serif;
+  text-shadow: 2px 2px 3px black;
+}
+
+p {
+  font-family: "Libre Baskerville", Geneva, Tahoma, sans-serif;
 }
 
 .elevated-container {
   box-shadow: 10px 10px 15px rgba(0, 0, 0, 0.5);
+}
+
+.elevated {
+  box-shadow: 2px 2px 5px rgba(0, 0, 0, 0.7);
+}
+
+img {
+  border-radius: 10px;
 }
 
 /* RETURN TO THE LABYRINTH BUTTON */
@@ -100,3 +120,55 @@ div.item.active {
 #medium {
   display: none;
 } */
+
+/* INDEX PAGE */
+
+div#index-page {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  width: 100vw;
+  height: 100vh;
+  background-color: darkslategrey;
+  color: white;
+}
+
+div.welcome-container {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  gap: 50px;
+}
+
+div.index-buttons {
+  display: flex;
+  width: 100%;
+  justify-content: center;
+  gap: 50px;
+}
+
+button.difficulty-button {
+  width: 80px;
+  height: 40px;
+  border-radius: 15px;
+}
+
+button#easy {
+  background-color: lime;
+}
+
+button#medium {
+  background-color: yellow;
+}
+
+button#hard {
+  background-color: crimson;
+}
+
+button#start {
+  width: 100px;
+  height: 50px;
+  border-radius: 15px;
+}
