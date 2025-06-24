@@ -1,39 +1,24 @@
 import { renderFooter } from "./footerHandler.js";
 import {
   initFibonacciInput,
-  initUserItems,
+  getUserItems,
   rightFibonacciAnswer,
+  setUserItems,
 } from "./globals.js";
 const currentFibonacciInput =
   JSON.parse(localStorage.getItem("currentFibonacciInput")) ||
   initFibonacciInput();
 
-const userItems =
-  JSON.parse(localStorage.getItem("userItems")) || initUserItems();
+const userItems = getUserItems();
 const container = document.getElementById("page-content");
 
 //get the total of fibonacci numbers containers
 const spanContainers = document.getElementsByClassName("fib-number-content");
 
 /**
- * get the actual input stored in local store and init each fibonacci numbers containers
- */
-const initNumbers = () => {
-  for (let i = 0; i < spanContainers.length; i++) {
-    while (spanContainers[i].firstChild) {
-      spanContainers[i].removeChild(spanContainers[i].firstChild);
-    }
-    const span = document.createElement("span");
-    span.id = `fib-number-${i + 1}`;
-    span.innerHTML = currentFibonacciInput[i];
-    spanContainers[i].appendChild(span);
-  }
-};
-
-/**
  *
  *
- * @returns true in the input is right and trigger after complete logic
+ * @returns true in the input is right
  */
 const checkAnswer = () => {
   for (let i = 0; i < currentFibonacciInput.length; i++) {
@@ -44,16 +29,36 @@ const checkAnswer = () => {
   return true;
 };
 
-const onRewardClick = () => {
-  userItems[2].userHasItem = true;
-  console.log("icon clicked");
-  localStorage.setItem("userItems", JSON.stringify(userItems));
+/**
+ * get the actual input stored in local store and init each fibonacci numbers containers
+ */
+const initNumbers = () => {
+  if (!checkAnswer()) {
+    for (let i = 0; i < spanContainers.length; i++) {
+      while (spanContainers[i].firstChild) {
+        spanContainers[i].removeChild(spanContainers[i].firstChild);
+      }
+      const span = document.createElement("span");
+      span.id = `fib-number-${i + 1}`;
+      span.innerHTML = currentFibonacciInput[i];
+      spanContainers[i].appendChild(span);
+    }
+  }
+};
+
+const earthCompletedAndRewarded = () => {
   const messageAfterGrab = document.createElement("div");
   messageAfterGrab.classList.add("grab-fire-message");
   messageAfterGrab.innerHTML = "This test was already passed";
   container.innerHTML = "";
   container.appendChild(messageAfterGrab);
   renderFooter();
+};
+
+const onRewardClick = () => {
+  userItems[2].userHasItem = true;
+  setUserItems(userItems);
+  window.location.href = "00-home.html";
 };
 
 /**
@@ -110,8 +115,13 @@ const addListeners = () => {
     });
   }
 };
-initNumbers();
-addListeners();
-if (checkAnswer() || userItems[2].userHasItem) {
-  earthCompleted();
+if (checkAnswer()) {
+  if (userItems[2].userHasItem) {
+    earthCompletedAndRewarded();
+  } else {
+    earthCompleted();
+  }
+} else {
+  initNumbers();
+  addListeners();
 }
