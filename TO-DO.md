@@ -51,18 +51,18 @@ GitHub pull, start of workflow:
   - [ ] Start
   - [ ] START out with Earth element to open the FIRST Door
 
-- [ ] Home/Labyrinth page 00-home.html
+- [x] Home/Labyrinth page 00-home.html
 - [ ] water room / color sort puzzle
 - [ ] air room update image puzzle to key image
 - [ ] FIRE ROOM now will be torch puzzle
-- [ ] Build Torch Room
-- [ ] 4 puzzle doors, one grand giant door for finished puzzle
+- [x] Build Torch Room
+- [x] 4 puzzle doors, one grand giant door for finished puzzle
 - [x] Finish Footer
 
 STYLES
 
-- [ ] GLOBAL STYLES / INDEX.html
-- [ ] 00 - HOME PAGE
+- [x] GLOBAL STYLES / INDEX.html
+- [x] 00 - HOME PAGE
 - [ ] EARTH - FIBONACCI
 - [ ] WATER - COLOR SORT
 - [ ] FIRE - TORCH ROOM
