@@ -1,3 +1,78 @@
+body {
+  background-color: aqua;
+  background-blend-mode: darken;
+}
+
+h1 {
+  text-align: center;
+  size: 48px;
+  font-weight: 700;
+}
+
+h2 {
+  text-align: center;
+  size: 36px;
+  font-weight: 700;
+}
+
+p {
+  text-align: center;
+  size: 28px;
+  font-weight: 700;
+}
+
+#puzzle-container {
+  align-content: center;
+  position: fixed;
+  left: 150px;
+  top: 200px;
+  display: flex;
+  flex-direction: row;
+  height: 650px;
+  width: 85%;
+  border: 5px solid black;
+  background-color: white;
+}
+
 .liq-container {
-  shape-rendering: rectangle;
+  display: flex;
+  border: 5px solid black;
+  flex-direction: column;
+  width: 100px;
+  height: 500px;
+  margin-top: 100px;
+  margin-left: 200px;
+  margin-right: 100px;
+  margin-bottom: 100px;
+  border-bottom-left-radius: 25px;
+  border-bottom-right-radius: 25px;
+}
+
+.liq-red {
+  display: inline-flex;
+  width: auto;
+  height: 125px;
+  background-color: red;
+  border: 2px dashed darkred;
+}
+
+.liq-green {
+  display: inline-flex;
+  width: auto;
+  height: 125px;
+  background-color: darkgreen;
+  border: 2px dashed rgb(0, 50, 0);
+}
+
+.liq-blue {
+  display: inline-flex;
+  width: auto;
+  height: 125px;
+  background-color: blue;
+  border: 2px dashed rgb(0, 0, 75);
+}
+
+.bottom {
+  border-bottom-left-radius: 25px;
+  border-bottom-right-radius: 25px;
 }
