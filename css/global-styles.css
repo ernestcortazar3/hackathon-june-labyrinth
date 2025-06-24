@@ -39,6 +39,27 @@ img {
   border-radius: 10px;
 }
 
+/* HINT / SOLVE GLOBAL ICONS */
+
+.hint-icon,
+.solve-icon {
+  position: fixed;
+  right: 20px;
+  color: white;
+  font-size: 32px;
+  width: 35px;
+  height: 35px;
+  text-align: center;
+}
+
+.hint-icon {
+  top: 20px;
+}
+
+.solve-icon {
+  top: 80px;
+}
+
 /* RETURN TO THE LABYRINTH BUTTON */
 
 .return-button {
@@ -63,6 +84,29 @@ img {
   color: white;
 }
 
+/* POP UP HINT WINDOW */
+
+div.pop-up-hint {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  gap: 30px;
+  height: 200px;
+  width: 200px;
+  padding: 50px;
+  background-color: rgb(0, 0, 0, 0.3);
+  display: none;
+}
+
+div > button.close {
+  width: 50px;
+  border-radius: 5px;
+  background-color: grey;
+  font-family: "Libre Baskerville", Geneva, Tahoma, sans-serif;
+  color: white;
+}
+
 /* FOOTER */
 
 footer {
@@ -75,7 +119,6 @@ footer {
   display: flex;
   flex-direction: row;
   justify-content: space-between;
-  /* box-shadow: -2px -5px 10px rgba(0, 0, 0, 0.5); */
 }
 
 #item-inventory {
