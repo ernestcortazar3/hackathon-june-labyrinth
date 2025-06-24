@@ -21,6 +21,7 @@ h1 {
   flex-direction: row;
   gap: 80px;
   justify-content: center;
+  align-items: end;
 }
 
 .torch-stack {
