@@ -1,19 +1,3 @@
-# Branch Updates
-
-GitHub pull, start of workflow:
-
-> git checkout main
-> Switches selected branch to the main branch
-
-> git pull origin main
-> Pulls most up-to-date from main remote branch to local.
-
-> git branch -f 'branch-name' main
-> Forces branch 'branch-name' to move to defined location (main).
-
-> git checkout 'branch-name'
-> Switches selected branch back to working branch.
-
 # To-Do List
 
 ## Create defined paths for puzzles / pages.
@@ -44,17 +28,17 @@ GitHub pull, start of workflow:
 - [x] Define what item will open what door from Home/Labyrinth page.
 - [ ] Build:
 
-  - [ ] Start page
-  - [ ] Welcome
+  - [x] Start page
+  - [x] Welcome
   - [ ] Info / description of game.
-  - [ ] Easy, Med, Hard buttons
-  - [ ] Start
-  - [ ] START out with Earth element to open the FIRST Door
+  - [x] Easy, Med, Hard buttons
+  - [x] Start
+  - [x] START out with Earth element to open the FIRST Door
 
 - [x] Home/Labyrinth page 00-home.html
-- [ ] water room / color sort puzzle
+- [x] water room / color sort puzzle
 - [ ] air room update image puzzle to key image
-- [ ] FIRE ROOM now will be torch puzzle
+- [x] FIRE ROOM now will be torch puzzle
 - [x] Build Torch Room
 - [x] 4 puzzle doors, one grand giant door for finished puzzle
 - [x] Finish Footer
@@ -63,7 +47,22 @@ STYLES
 
 - [x] GLOBAL STYLES / INDEX.html
 - [x] 00 - HOME PAGE
-- [ ] EARTH - FIBONACCI
+- [x] EARTH - FIBONACCI
 - [ ] WATER - COLOR SORT
-- [ ] FIRE - TORCH ROOM
+- [x] FIRE - TORCH ROOM
 - [ ] AIR - IMAGE PUZZLE
+
+## As of 6/25 Project has changed direction to build the Labyrinth per the Group Concious.
+
+See images:
+
+![Labyrinth Map]](assets/to-do/maze-map-v2-min.jpg)
+
+![Room descriptions, conditions, and rules](assets/to-do/maze-map-v2-min.jpg)
+
+[x] Map out labyrinth.
+[x] Define items per room.
+[ ] Create Empty Room - html
+[ ] Global Icon controller [arrows]
+
+-ernie 6/25
