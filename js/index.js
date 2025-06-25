@@ -21,9 +21,8 @@ console.log("");
 
 startBtn.addEventListener("click", () => {
   const difficulty = getGameDifficulty();
-  console.log(`difficulty is '${difficulty}'`);
   if (difficulty) {
-    window.location.href("/pages/00-home.html");
+    window.location.href = "/pages/00-home.html";
   } else {
     console.log("add behavior in case no difficulty selected");
   }
