@@ -1,6 +1,7 @@
 import { getCurrentTorches, setCurrentTorches } from "./globals.js";
 
 const rightTorchOrder = [3, 1, 5, 2, 4];
+const currentTorchOrder = getCurrentTorches();
 
 const drawFlames = () => {
   const currentTorchOrder = getCurrentTorches();
@@ -37,7 +38,10 @@ const checkAnswer = () => {
 const addFlame = (position) => {
   const currentTorches = getCurrentTorches();
   if (!currentTorches.includes(position)) {
-    setCurrentTorches(currentTorches.push(position));
+    currentTorches.push(position);
+    setCurrentTorches(currentTorches);
+    drawFlames();
+    checkAnswer();
   }
 };
 
@@ -51,3 +55,6 @@ const addEventListener = () => {
     });
   }
 };
+drawFlames();
+checkAnswer();
+addEventListener();
