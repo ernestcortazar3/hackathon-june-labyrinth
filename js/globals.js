@@ -1,15 +1,6 @@
-export const rightFibonacciAnswer = [1, 1, 1, 1];
-
+//****************user Items**************** */
 export const setUserItems = (userItems) => {
   localStorage.setItem("userItems", JSON.stringify(userItems));
-};
-
-export const setGameDifficulty = (difficulty) => {
-  localStorage.setItem("difficulty", difficulty);
-};
-
-export const getGameDifficulty = () => {
-  return localStorage.getItem("difficulty");
 };
 
 /**
@@ -60,6 +51,18 @@ export const getUserItems = (restarting = false) => {
   return userItems;
 };
 
+//************************game difficulty****************************** */
+export const setGameDifficulty = (difficulty) => {
+  localStorage.setItem("difficulty", difficulty);
+};
+
+export const getGameDifficulty = () => {
+  return localStorage.getItem("difficulty");
+};
+
+//************************Fibonaccy************************************* */
+export const rightFibonacciAnswer = [1, 1, 1, 1];
+
 export const initFibonacciInput = () => {
   const initialFibonacci = [0, 0, 0, 0];
   localStorage.setItem(
@@ -69,8 +72,23 @@ export const initFibonacciInput = () => {
   return initialFibonacci;
 };
 
+//************************Torches**************************************** */
+export const setCurrentTorches = (torches) => {
+  localStorage.setItem("currentTorches", JSON.stringify(torches));
+};
+
+export const getCurrentTorches = () => {
+  const defaultTorches = [];
+  let currentTorches = JSON.parse(localStorage.getItem("currentTorches"));
+  if (!currentTorches) {
+    setCurrentTorches(defaultTorches);
+    currentTorches = defaultTorches;
+  }
+  return currentTorches;
+};
 export const restartGame = () => {
   localStorage.removeItem("difficulty");
   getUserItems(true);
   initFibonacciInput();
+  setCurrentTorches([]);
 };
