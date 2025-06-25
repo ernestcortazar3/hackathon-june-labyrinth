@@ -4,6 +4,14 @@ export const setUserItems = (userItems) => {
   localStorage.setItem("userItems", JSON.stringify(userItems));
 };
 
+export const setGameDifficulty = (difficulty) => {
+  localStorage.setItem("difficulty", difficulty);
+};
+
+export const getGameDifficulty = () => {
+  return localStorage.getItem("difficulty");
+};
+
 /**
  * get the stored userItems or initialized in case is no set or true passed as @param
  * @param {boolean} restarting
@@ -17,27 +25,32 @@ export const getUserItems = (restarting = false) => {
       {
         name: "leaf",
         icon: "fa-leaf",
-        userHasItem: true,
+        userHasItem: false,
+        color: "blue",
       },
       {
         name: "wind",
         icon: "fa-wind",
-        userHasItem: true,
+        userHasItem: false,
+        color: "blue",
       },
       {
         name: "fire",
         icon: "fa-fire-flame-curved",
         userHasItem: false,
+        color: "blue",
       },
       {
         name: "water",
         icon: "fa-water",
-        userHasItem: true,
+        userHasItem: false,
+        color: "blue",
       },
       {
         name: "key",
         icon: "fa-key",
-        userHasItem: true,
+        userHasItem: false,
+        color: "blue",
       },
     ];
     setUserItems(userItems);
@@ -57,11 +70,7 @@ export const initFibonacciInput = () => {
 };
 
 export const restartGame = () => {
+  localStorage.removeItem("difficulty");
   getUserItems(true);
   initFibonacciInput();
 };
-
-const restartBtn = document.getElementById("restart-game");
-if (restartBtn) {
-  restartBtn.addEventListener("click", () => restartGame());
-}

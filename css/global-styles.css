@@ -205,19 +205,19 @@ button.difficulty-button {
   border-radius: 15px;
 }
 
-button#easy {
+button#btn-easy {
   background-color: lime;
 }
 
-button#medium {
+button#btn-medium {
   background-color: yellow;
 }
 
-button#hard {
+button#btn-hard {
   background-color: crimson;
 }
 
-button#start {
+button#btn-start {
   width: 100px;
   height: 50px;
   border-radius: 15px;
