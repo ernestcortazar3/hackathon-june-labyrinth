@@ -1,5 +1,4 @@
-export const rightFibonacciAnswer = [1, 1, 1, 1];
-
+//****************user Items**************** */
 export const setUserItems = (userItems) => {
   localStorage.setItem("userItems", JSON.stringify(userItems));
 };
@@ -17,27 +16,32 @@ export const getUserItems = (restarting = false) => {
       {
         name: "leaf",
         icon: "fa-leaf",
-        userHasItem: true,
+        userHasItem: false,
+        color: "blue",
       },
       {
         name: "wind",
         icon: "fa-wind",
-        userHasItem: true,
+        userHasItem: false,
+        color: "blue",
       },
       {
         name: "fire",
         icon: "fa-fire-flame-curved",
         userHasItem: false,
+        color: "blue",
       },
       {
         name: "water",
         icon: "fa-water",
-        userHasItem: true,
+        userHasItem: false,
+        color: "blue",
       },
       {
         name: "key",
         icon: "fa-key",
-        userHasItem: true,
+        userHasItem: false,
+        color: "blue",
       },
     ];
     setUserItems(userItems);
@@ -46,6 +50,18 @@ export const getUserItems = (restarting = false) => {
   }
   return userItems;
 };
+
+//************************game difficulty****************************** */
+export const setGameDifficulty = (difficulty) => {
+  localStorage.setItem("difficulty", difficulty);
+};
+
+export const getGameDifficulty = () => {
+  return localStorage.getItem("difficulty");
+};
+
+//************************Fibonaccy************************************* */
+export const rightFibonacciAnswer = [1, 1, 1, 1];
 
 export const initFibonacciInput = () => {
   const initialFibonacci = [0, 0, 0, 0];
@@ -56,12 +72,23 @@ export const initFibonacciInput = () => {
   return initialFibonacci;
 };
 
-export const restartGame = () => {
-  getUserItems(true);
-  initFibonacciInput();
+//************************Torches**************************************** */
+export const setCurrentTorches = (torches) => {
+  localStorage.setItem("currentTorches", JSON.stringify(torches));
 };
 
-const restartBtn = document.getElementById("restart-game");
-if (restartBtn) {
-  restartBtn.addEventListener("click", () => restartGame());
-}
+export const getCurrentTorches = () => {
+  const defaultTorches = [];
+  let currentTorches = JSON.parse(localStorage.getItem("currentTorches"));
+  if (!currentTorches) {
+    setCurrentTorches(defaultTorches);
+    currentTorches = defaultTorches;
+  }
+  return currentTorches;
+};
+export const restartGame = () => {
+  localStorage.removeItem("difficulty");
+  getUserItems(true);
+  initFibonacciInput();
+  setCurrentTorches([]);
+};
