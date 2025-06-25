@@ -47,7 +47,7 @@ GitHub pull, start of workflow:
 
 - Pulls most up-to-date changes from Remote to Local
 
-> git checkout -b <unique-branch-name>
+> git checkout -b 'unique-branch-name'
 
 - Creates a new branch, names the branch, and moves HEAD to the new creation.
 
@@ -68,12 +68,12 @@ GitHub pull, start of workflow:
 - makes sure that you are pushing up the most recent version.
 - If there are any merge conflicts, resolve, then "git add ." and "git commit" again the FIX: Merge conflicts.
 
-> git push origin <unique-branch-name>
+> git push origin 'unique-branch-name'
 
 - Sends the last commit to the Remote Branch
 
 - Create PR (GitHub.com)
 
-  - Merges <unique-branch-name> into the main branch.
+  - Merges 'unique-branch-name' into the main branch.
 
 - Branch then can be deleted.
