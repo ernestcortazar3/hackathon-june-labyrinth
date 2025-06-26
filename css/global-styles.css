@@ -60,6 +60,41 @@ img {
   top: 80px;
 }
 
+.compass-container {
+  display: inline-flex;
+}
+
+.up-icon,
+.down-icon,
+.left-icon,
+.right-icon {
+  position: fixed;
+  left: 55px;
+  color: black;
+  font-size: 32px;
+  width: 35px;
+  height: 35px;
+  text-align: center;
+}
+
+.up-icon {
+  top: 10px;
+}
+
+.down-icon {
+  top: 56px;
+}
+
+.left-icon {
+  left: 32px;
+  top: 32px;
+}
+
+.right-icon {
+  left: 78px;
+  top: 32px;
+}
+
 /* RETURN TO THE LABYRINTH BUTTON */
 
 .return-button {
