@@ -1,10 +1,9 @@
 import { getUserItems } from "./globals.js";
 
-const savedItems =
-  JSON.parse(localStorage.getItem("userItems")) || getUserItems();
-const itemContainer = document.getElementById("item-inventory");
-
 export const renderFooter = () => {
+  const itemContainer = document.getElementById("item-inventory");
+  const savedItems =
+    JSON.parse(localStorage.getItem("userItems")) || getUserItems();
   itemContainer.innerHTML = "";
   for (let i = 0; i < savedItems.length; i++) {
     const item = savedItems[i];
@@ -14,7 +13,6 @@ export const renderFooter = () => {
     const icon = document.createElement("i");
     icon.classList.add("fa-solid", item.icon);
     if (item.userHasItem) {
-      console.log("color applied");
       icon.style.color = item.color;
     }
     inventoryItem.appendChild(icon);
