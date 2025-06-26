@@ -23,7 +23,8 @@ h2 {
   text-align: center;
 }
 
-p {
+p,
+div {
   font-family: "Libre Baskerville", Geneva, Tahoma, sans-serif;
 }
 
