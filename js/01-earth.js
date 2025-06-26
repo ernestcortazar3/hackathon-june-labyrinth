@@ -55,10 +55,9 @@ const earthCompletedAndRewarded = () => {
   renderFooter();
 };
 
-const onRewardClick = () => {
+const onIconRewardClick = () => {
   userItems[2].userHasItem = true;
   setUserItems(userItems);
-  window.location.href = "00-home.html";
 };
 
 /**
@@ -70,7 +69,7 @@ const earthCompleted = () => {
   rewardContainer.classList.add("reward-container");
   const rewardIcon = document.createElement("i");
   rewardIcon.classList.add("fa-solid", "fa-fire-flame-curved", "reward-Item");
-  rewardIcon.addEventListener("click", onRewardClick);
+  rewardIcon.addEventListener("click", onIconRewardClick);
   const messageBeforeGrab = document.createElement("div");
   messageBeforeGrab.classList.add("grab-fire-message");
   messageBeforeGrab.innerHTML = "This test was already passed, grab your price";
