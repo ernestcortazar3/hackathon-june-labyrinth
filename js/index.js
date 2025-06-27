@@ -6,25 +6,52 @@ import {
 
 const restartBtn = document.getElementById("btn-restart-game");
 if (restartBtn) {
-  restartBtn.addEventListener("click", () => restartGame());
+  restartBtn.addEventListener("click", () => {
+    removeActiveClass();
+    restartGame();
+  });
 }
 
 const easyBtn = document.getElementById("btn-easy");
-easyBtn.addEventListener("click", () => setGameDifficulty("easy"));
 const mediumBtn = document.getElementById("btn-medium");
-mediumBtn.addEventListener("click", () => setGameDifficulty("medium"));
 const hardBtn = document.getElementById("btn-hard");
-hardBtn.addEventListener("click", () => setGameDifficulty("hard"));
+
+const removeActiveClass = () => {
+  easyBtn.classList.remove("active");
+  mediumBtn.classList.remove("active");
+  hardBtn.classList.remove("active");
+};
+
+easyBtn.addEventListener("click", () => {
+  setGameDifficulty("easy");
+  removeActiveClass();
+  easyBtn.classList.add("active");
+});
+mediumBtn.addEventListener("click", () => {
+  setGameDifficulty("medium");
+  removeActiveClass();
+  mediumBtn.classList.add("active");
+});
+hardBtn.addEventListener("click", () => {
+  setGameDifficulty("hard");
+  removeActiveClass();
+  hardBtn.classList.add("active");
+});
 
 const startBtn = document.getElementById("btn-start");
-console.log("");
 
 startBtn.addEventListener("click", () => {
   const difficulty = getGameDifficulty();
   if (difficulty) {
     window.location.href = "/pages/00-home.html";
   } else {
-    console.log("add behavior in case no difficulty selected");
+    const warning = document.createElement("div");
+    warning.id = "labyrinth-warning";
+    const emphatic = document.createElement("em");
+    emphatic.innerHTML = "The elements whisper:";
+    const quote = document.createElement("q");
+    quote.innerHTML = "Choose your difficulty, or be lost before you begin.";
+    warning.append(emphatic, quote);
+    startBtn.insertAdjacentElement("afterend", warning);
   }
 });
-restartGame();

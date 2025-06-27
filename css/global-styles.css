@@ -287,7 +287,8 @@ button.difficulty-button {
   background-color: rgb(0, 255, 0, 0.7);
 }
 
-#btn-easy:hover {
+#btn-easy:hover,
+#btn-easy.active {
   background-color: rgb(0, 255, 0);
 }
 
@@ -295,14 +296,16 @@ button.difficulty-button {
   background-color: rgb(255, 255, 0, 0.7);
 }
 
-#btn-medium:hover {
+#btn-medium:hover,
+#btn-medium.active {
   background-color: rgb(255, 255, 0);
 }
 
 #btn-hard {
   background-color: rgb(220, 20, 60, 0.7);
 }
-#btn-hard:hover {
+#btn-hard:hover,
+#btn-hard.active {
   background-color: rgb(220, 20, 60);
 }
 
