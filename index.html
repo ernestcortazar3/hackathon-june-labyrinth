@@ -4,6 +4,7 @@
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <link rel="stylesheet" href="/css/global-styles.css" />
+    <script src="../js/navigation.js" defer></script>
     <title>The Labyrinth</title>
   </head>
   <body>
@@ -11,13 +12,48 @@
     <div id="index-page">
       <div class="welcome-container">
         <h1 class="index">Labyrinth of Elements</h1>
-        <p class="index">Select Your Difficulty</p>
-        <div class="index-buttons">
-          <button id="btn-easy" class="difficulty-button">EASY</button>
-          <button id="btn-medium" class="difficulty-button">MEDIUM</button>
-          <button id="btn-hard" class="difficulty-button">HARD</button>
+        <div class="welcome-text">
+          <p class="index italics">
+            You stand before the entrance to an ancient maze whispered about in
+            forbidden texts and forgotten dreams.
+          </p>
+          <p class="index">
+            Born of Earth, Air, Fire, and Water...
+            <br />
+            the Labyrinth shifts, waits, and watches.
+            <br />
+            Will you navigate its secrets?
+            <br />
+            Or will you vanish like so many before you?
+          </p>
         </div>
-        <button id="btn-start" class="elevated">START</button>
+        <div class="index-button-container">
+          <h2 class="index">Choose Your Path:</h2>
+          <div class="difficulty-buttons">
+            <button id="btn-easy" class="difficulty-button">
+              <div class="btn-text">EASY</div>
+              <div class="italics">
+                A gentle breeze through stone corridors...
+              </div>
+            </button>
+            <button id="btn-medium" class="difficulty-button">
+              <div class="btn-text">MEDIUM</div>
+              <div class="italics">
+                The winds stir and the ground grows restless...
+              </div>
+            </button>
+            <button id="btn-hard" class="difficulty-button">
+              <div class="btn-text">HARD</div>
+              <div class="italics">Fire awakens. The maze is alive.</div>
+            </button>
+          </div>
+        </div>
+        <div class="btn-start index-button-container">
+          <h2 class="index">Press “Start” to enter the unknown</h2>
+          <button id="btn-start" class="elevated">
+            <div class="btn-text">START</div>
+          </button>
+        </div>
       </div>
     </div>
     <button id="btn-restart-game">Restart Game</button>
