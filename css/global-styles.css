@@ -44,25 +44,30 @@ img {
   border-radius: 10px;
 }
 
-/* HINT / SOLVE GLOBAL ICONS */
+/* HINT / SOLVE / MAP GLOBAL ICONS */
 
 .hint-icon,
-.solve-icon {
+.solve-icon,
+.map-icon {
   position: fixed;
   right: 20px;
-  color: white;
+  color: snow;
   font-size: 32px;
   width: 35px;
   height: 35px;
   text-align: center;
 }
 
-.hint-icon {
+.map-icon {
   top: 20px;
 }
 
-.solve-icon {
+.hint-icon {
   top: 80px;
+}
+
+.solve-icon {
+  top: 140px;
 }
 
 /* Navigation Icons */
