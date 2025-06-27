@@ -28,6 +28,10 @@ div {
   font-family: "Libre Baskerville", Geneva, Tahoma, sans-serif;
 }
 
+.italics {
+  font-style: italic;
+}
+
 .elevated-container {
   box-shadow: 10px 10px 15px rgba(0, 0, 0, 0.5);
 }
@@ -220,41 +224,90 @@ div#index-page {
   color: white;
 }
 
-div.welcome-container {
+.welcome-container {
   display: flex;
   flex-direction: column;
   justify-content: center;
   align-items: center;
-  gap: 50px;
+  gap: 45px;
 }
 
-div.index-buttons {
+.welcome-text {
   display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  gap: 25px;
+}
+
+h1.index {
+  font-size: 48px;
+}
+
+h2.index {
+  font-size: 32px;
+}
+
+p.index {
+  text-align: center;
+  font-size: 18px;
+}
+
+.index-button-container {
+  display: flex;
+  flex-direction: column;
   width: 100%;
   justify-content: center;
-  gap: 50px;
+  align-items: center;
+  gap: 20px;
+}
+
+.difficulty-buttons {
+  display: flex;
+  gap: 20px;
 }
 
 button.difficulty-button {
-  width: 80px;
-  height: 40px;
+  width: 150px;
+  height: 120px;
   border-radius: 15px;
+  padding: 20px;
+  display: flex;
+  flex-direction: column;
+  gap: 5px;
 }
 
-button#btn-easy {
-  background-color: lime;
+#btn-easy {
+  background-color: rgb(0, 255, 0, 0.7);
 }
 
-button#btn-medium {
-  background-color: yellow;
+#btn-easy:hover {
+  background-color: rgb(0, 255, 0);
 }
 
-button#btn-hard {
-  background-color: crimson;
+#btn-medium {
+  background-color: rgb(255, 255, 0, 0.7);
 }
 
-button#btn-start {
-  width: 100px;
-  height: 50px;
+#btn-medium:hover {
+  background-color: rgb(255, 255, 0);
+}
+
+#btn-hard {
+  background-color: rgb(220, 20, 60, 0.7);
+}
+#btn-hard:hover {
+  background-color: rgb(220, 20, 60);
+}
+
+#btn-start {
+  width: 250px;
+  height: 80px;
   border-radius: 15px;
+  font-size: 50px;
+  background-color: rgb(222, 222, 222, 0.7);
+}
+
+#btn-start:hover {
+  background-color: rgb(239, 239, 239);
 }
