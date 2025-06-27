@@ -1,8 +1,4 @@
-import {
-  getCurrentWater,
-  setCurrentTorches,
-  setCurrentWater,
-} from "./globals.js";
+import { getCurrentWater, setCurrentWater } from "./globals.js";
 
 let selectedRecipe = null;
 
@@ -21,6 +17,7 @@ const handleOnclick = (position) => {
   console.log("start click");
   if (selectedRecipe === null) {
     selectedRecipe = position;
+    drawContainers();
     return;
   } else if (selectedRecipe !== position) {
     pourLiquid(selectedRecipe, position);
@@ -37,6 +34,9 @@ const drawContainers = () => {
   for (let i = 0; i < currentWater.length; i++) {
     const liqContainer = document.createElement("div");
     liqContainer.classList.add("liq-container");
+    if (selectedRecipe === i) {
+      liqContainer.classList.add("selected");
+    }
     liqContainer.addEventListener("click", () => {
       handleOnclick(i);
     });
