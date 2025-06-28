@@ -17,6 +17,7 @@ div.hint-room {
   gap: 50px;
 }
 
+/* IMAGE HINT */
 img.image-hint {
   width: 300px;
   opacity: 0.1;
@@ -25,7 +26,18 @@ img.image-hint:hover {
   opacity: 0.7;
 }
 
+/* WATER HINT */
 .water > div {
   color: skyblue;
   font-size: 26px;
+}
+
+/* TORCH HINT */
+.torch > div {
+  font-size: 36px;
+}
+
+span {
+  padding: 10px;
+  font-size: 16px;
 }
