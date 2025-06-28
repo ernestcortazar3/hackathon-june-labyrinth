@@ -51,11 +51,17 @@ img {
 .map-icon {
   position: fixed;
   right: 20px;
-  color: snow;
+  color: rgb(145, 145, 145);
   font-size: 32px;
   width: 35px;
   height: 35px;
   text-align: center;
+}
+
+.hint-icon:hover,
+.solve-icon:hover,
+.map-icon:hover {
+  color: snow;
 }
 
 .map-icon {
@@ -81,53 +87,35 @@ img {
 .right-icon {
   position: fixed;
   left: 55px;
-  color: black;
-  font-size: 32px;
-  width: 35px;
-  height: 35px;
+  color: rgb(145, 145, 145);
+  font-size: 48px;
+  width: 50px;
+  height: 50px;
   text-align: center;
+}
+.up-icon:hover,
+.down-icon:hover,
+.left-icon:hover,
+.right-icon:hover {
+  color: snow;
 }
 
 .up-icon {
-  top: 10px;
+  top: 20px;
 }
 
 .down-icon {
-  top: 56px;
+  top: 66px;
 }
 
 .left-icon {
   left: 32px;
-  top: 32px;
+  top: 42px;
 }
 
 .right-icon {
   left: 78px;
-  top: 32px;
-}
-
-/* RETURN TO THE LABYRINTH BUTTON */
-
-.return-button {
-  position: fixed;
-  top: 20px;
-  left: 20px;
-  display: flex;
-  flex-direction: column;
-  justify-content: center;
-  align-items: center;
-  gap: 5px;
-  background-color: rgba(0, 0, 0, 0.3);
-  border-radius: 10px;
-  width: 100px;
-  height: 70px;
-}
-
-.return-button > p,
-.return-button > i {
-  text-align: center;
-  font-size: 22px;
-  color: white;
+  top: 42px;
 }
 
 /* POP UP HINT WINDOW */
