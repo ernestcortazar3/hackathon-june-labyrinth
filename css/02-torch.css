@@ -59,6 +59,7 @@ img {
   border-radius: 0;
 }
 
+/* POST PUZZLE */
 #fire-reward-container {
   width: 100%;
   height: 100%;
@@ -82,6 +83,6 @@ i.reward-Item {
 
 .grab-fire-message {
   position: fixed;
-  width: auto;
+  width: 70%;
   top: 300px;
 }
