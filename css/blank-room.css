@@ -9,3 +9,22 @@ div.blank-room {
   align-items: center;
   color: snow;
 }
+
+/* HALFWAY HINT ROOM */
+
+.text-container {
+  display: flex;
+  flex-direction: column;
+  gap: 50px;
+}
+.hint {
+  font-size: 32px;
+}
+.quote {
+  font-size: 24px;
+}
+.quote-text {
+  display: flex;
+  flex-direction: column;
+  gap: 20px;
+}
