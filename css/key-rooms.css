@@ -1,3 +1,5 @@
+/* KEY HINT ROOM */
+
 div.key-hint {
   background-image: url(/assets/key-hint-bg.jpg);
   background-size: cover;
@@ -13,4 +15,36 @@ div.key-hint {
 .text-container > div {
   font-size: 18px;
   padding: 5px;
+}
+
+/* KEY ROOM */
+
+div.key-room {
+  background-image: url(/assets/key-room-bg.jpg);
+  background-size: cover;
+  width: 100vw;
+  height: 100vh;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  color: snow;
+}
+
+.text-container {
+  height: 100px;
+  display: flex;
+  flex-direction: column;
+  justify-content: end;
+  align-items: center;
+  font-weight: bold;
+}
+
+.text-container > div {
+  font-size: 22px;
+}
+
+div.key-icon {
+  text-align: center;
+  font-size: 60px;
+  color: gold;
 }
