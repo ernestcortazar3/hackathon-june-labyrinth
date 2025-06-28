@@ -12,6 +12,7 @@
     ></script>
     <script src="../js/navigation.js" defer></script>
     <script src="../js/rooms.js" defer></script>
+    <script src="../js/start-room.js" defer></script>
   </head>
   <body>
     <div id="22" class="room">
@@ -25,72 +26,83 @@
       <div class="left-icon"><i class="fa fa-arrow-left"></i></div>
       <div class="right-icon"><i class="fa fa-arrow-right"></i></div>
       <!-- .div01 - .div04 > display: hidden in start-room.css -->
+      <div>
+        <button id="instructions" onclick="openPopup()">Instructions</button>
+      </div>
       <!-- POP UP 01 -->
-      <div class="pop-up div01">
-        <h1>How to Survive the Labyrinth of Elements</h1>
-        <h2>🎯 Objective:</h2>
-        <div>
-          Find your way through the elemental maze, collect the sacred
-          artifacts, and unlock the path to escape.
+      <div class="popup hidden" id="popup">
+        <div class="popup-content">
+          <div class="panel hidden" id="panel-1">
+            <h1>How to Survive the Labyrinth of Elements</h1>
+            <h2>🎯 Objective:</h2>
+            <div>
+              Find your way through the elemental maze, collect the sacred
+              artifacts, and unlock the path to escape.
+            </div>
+            <div>Each step you take echoes into the unknown...</div>
+          </div>
+          <!-- POP UP 02 -->
+          <div class="panel hidden" id="panel-2">
+            <h1>How to Survive the Labyrinth of Elements</h1>
+            <h2>🔁 Navigation</h2>
+            <div>
+              You are exploring a 5x5 grid of rooms. Use the arrow icons on
+              every page to move through the Labyrinth.
+            </div>
+            <span class="center">Each room may be:</span>
+            <div>
+              ⬜ Empty... or so it seems.<br />
+              🔍 Reveals whispers from the Maze to guide your path.<br />
+              🧩 Solve the ancient challenge. Win an item. Unlock the next tier
+              of the mystery.
+            </div>
+            </div>
+          </div>
+          <!-- POP UP 03 -->
+          <div class="panel hidden" id="panel-3">
+            <h1>How to Survive the Labyrinth of Elements</h1>
+            <h2>🗺️ Map Icon</h2>
+            <div>
+              Click the map icon at any time to open a magical diagram of rooms
+              you've visited.
+            </div>
+            <span class="center">But beware:</span>
+            <div>
+              the map only reveals where you've been—never where you're going.
+            </div>
+          </div>
+          <!-- POP UP 04 -->
+          <div class="panel hidden" id="panel-4">
+            <h1>How to Survive the Labyrinth of Elements</h1>
+            <h2>🪄 Artifacts</h2>
+            <div>The Puzzle-Rooms will reward you with Elemental Items.</div>
+            <div>
+              These mystical keys unlock sealed rooms elsewhere in the
+              Labyrinth. Keep track of them... they are your only way forward.
+            </div>
+          </div>
+          <!-- POP UP 05 -->
+          <div class="panel hidden" id="panel-5">
+            <h1>How to Survive the Labyrinth of Elements</h1>
+            <h2>🚪 Escape...?</h2>
+            <div>
+              Legend says there is a final chamber where all elements converge.
+              Only those who possess the full set of sacred items may pass
+              through it.
+            </div>
+            <div>
+              Will you reach it? <br />
+              Or will the Labyrinth claim you?
+            </div>
+            <div>
+              <button class="begin" onclick="closePopup()">BEGIN</button>
+            </div>
+          </div>
+          <div class="popup-controls">
+            <button id="backBtn">Back</button>
+            <button id="nextBtn">Next</button>
+          </div>
         </div>
-        <div>Each step you take echoes into the unknown...</div>
-        <div><button id="next">next</button></div>
-      </div>
-      <!-- POP UP 02 -->
-      <div class="pop-up div02">
-        <h1>How to Survive the Labyrinth of Elements</h1>
-        <h2>🔁 Navigation</h2>
-        <div>
-          You are exploring a 5x5 grid of rooms. Use the arrow icons on every
-          page to move through the Labyrinth.
-        </div>
-        <span class="center">Each room may be:</span>
-        <div>
-          ⬜ Empty... or so it seems.<br />
-          🔍 Reveals whispers from the Maze to guide your path.<br />
-          🧩 Solve the ancient challenge. Win an item. Unlock the next tier of
-          the mystery.
-        </div>
-        <div><button class="next">next</button></div>
-      </div>
-      <!-- POP UP 03 -->
-      <div class="pop-up div03">
-        <h1>How to Survive the Labyrinth of Elements</h1>
-        <h2>🗺️ Map Icon</h2>
-        <div>
-          Click the map icon at any time to open a magical diagram of rooms
-          you've visited.
-        </div>
-        <span class="center">But beware:</span>
-        <div>
-          the map only reveals where you've been—never where you're going.
-        </div>
-        <div><button class="next">next</button></div>
-      </div>
-      <!-- POP UP 04 -->
-      <div class="pop-up div04">
-        <h1>How to Survive the Labyrinth of Elements</h1>
-        <h2>🪄 Artifacts</h2>
-        <div>The Puzzle-Rooms will reward you with Elemental Items.</div>
-        <div>
-          These mystical keys unlock sealed rooms elsewhere in the Labyrinth.
-          Keep track of them... they are your only way forward.
-        </div>
-        <div><button class="next">next</button></div>
-      </div>
-      <!-- POP UP 05 -->
-      <div class="pop-up div05">
-        <h1>How to Survive the Labyrinth of Elements</h1>
-        <h2>🚪 Escape...?</h2>
-        <div>
-          Legend says there is a final chamber where all elements converge. Only
-          those who possess the full set of sacred items may pass through it.
-        </div>
-        <div>
-          Will you reach it? <br />
-          Or will the Labyrinth claim you?
-        </div>
-        <div><button class="begin">BEGIN</button></div>
       </div>
     </div>
   </body>
