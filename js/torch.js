@@ -31,7 +31,8 @@ const getElementForAfterComplete = () => {
   });
   const messageBeforeGrab = document.createElement("div");
   messageBeforeGrab.classList.add("grab-fire-message");
-  messageBeforeGrab.innerHTML = "This test was already passed, grab your price";
+  messageBeforeGrab.innerHTML =
+    "You have conquered the flames! The Fire element is now yours — let its power ignite your path forward.";
   const messageAfterGrab = document.createElement("div");
   messageAfterGrab.classList.add("grab-fire-message");
   messageAfterGrab.innerHTML = "This test was already passed";
