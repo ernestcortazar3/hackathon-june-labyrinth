@@ -1,30 +1,59 @@
-import { getCurrentWater, setCurrentWater } from "./globals.js";
+import {
+  getCurrentWater,
+  getUserItems,
+  setCurrentWater,
+  setUserItems,
+} from "./globals.js";
+import { renderFooter } from "./footerHandler.js";
 
 let selectedRecipe = null;
+const rightAnswer = [
+  [],
+  ["blue", "blue", "blue", "blue"],
+  ["green", "green", "green", "green"],
+  ["red", "red", "red", "red"],
+];
+
+const checkAnswer = () => {
+  const currentWater = getCurrentWater();
+  for (let i = 0; i < rightAnswer.length; i++) {
+    if (rightAnswer[i].length !== currentWater[i].length) {
+      console.log("puzzle nooottt completeed");
+      return false;
+    }
+    for (let j = 0; j < rightAnswer[i].length; j++) {
+      if (rightAnswer[i][j] !== currentWater[i][j]) {
+        console.log("puzzle nooottt completeed");
+        return false;
+      }
+    }
+  }
+  console.log("puzzle completeed");
+  return true;
+};
 
 const pourLiquid = (source, target) => {
   const currentWater = getCurrentWater();
   if (currentWater[target].length < 4) {
-    console.log(currentWater);
     currentWater[target].push(currentWater[source].pop());
-    console.log(currentWater);
     setCurrentWater(currentWater);
     selectedRecipe = null;
   }
 };
 
 const handleOnclick = (position) => {
-  console.log("start click");
   if (selectedRecipe === null) {
     selectedRecipe = position;
-    drawContainers();
-    return;
   } else if (selectedRecipe !== position) {
     pourLiquid(selectedRecipe, position);
   } else {
     selectedRecipe = null;
   }
-  drawContainers();
+  if (checkAnswer()) {
+    waterCompleted();
+  } else {
+    drawContainers();
+  }
 };
 
 const drawContainers = () => {
@@ -52,4 +81,56 @@ const drawContainers = () => {
   }
 };
 
-drawContainers();
+const onIconRewardClick = () => {
+  const userItems = getUserItems();
+  userItems.find((item) => {
+    return item.name === "water";
+  }).userHasItem = true;
+  setUserItems(userItems);
+  waterCompleted();
+  renderFooter();
+};
+
+const getElementForAfterComplete = () => {
+  const userItems = getUserItems();
+  const rewardContainer = document.createElement("div");
+  rewardContainer.id = "water-reward-container";
+  rewardContainer.classList.add("reward-container");
+  const rewardIcon = document.createElement("i");
+  rewardIcon.classList.add("fa-solid", "fa-water", "reward-Item");
+  rewardIcon.addEventListener("click", () => {
+    onIconRewardClick();
+  });
+  const messageBeforeGrab = document.createElement("div");
+  messageBeforeGrab.classList.add("grab-water-message");
+  messageBeforeGrab.innerHTML =
+    "Where once the currents clashed, now they harmonize. The element of Water has awakened to your guidance.";
+  const messageAfterGrab = document.createElement("div");
+  messageAfterGrab.classList.add("grab-water-message");
+  messageAfterGrab.innerHTML = "This test was already passed";
+  const waterItem = userItems.find((item) => item.name === "water");
+
+  if (waterItem && waterItem.userHasItem) {
+    rewardContainer.appendChild(messageAfterGrab);
+  } else {
+    rewardContainer.appendChild(rewardIcon);
+    rewardContainer.appendChild(messageBeforeGrab);
+  }
+  return rewardContainer;
+};
+
+/**
+ * after puzzle was solved remove liquid containers and fill the container
+ */
+const waterCompleted = () => {
+  const container = document.getElementById("liq-puzzle-container");
+  container.innerHTML = "";
+  container.appendChild(getElementForAfterComplete());
+};
+
+if (checkAnswer()) {
+  waterCompleted();
+} else {
+  drawContainers();
+  console.log("puzzle noooottttt completeed");
+}

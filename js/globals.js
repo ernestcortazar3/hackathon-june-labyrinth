@@ -116,10 +116,10 @@ export const getCurrentWater = (restarting = false) => {
   let currentWater;
   if (!storedWater || restarting) {
     currentWater = [
-      ["red", "red", "blue", "green"],
-      ["blue", "blue", "green", "red"],
-      ["green", "green", "red", "blue"],
-      [],
+      ["red"],
+      ["blue", "blue", "blue", "blue"],
+      ["green", "green", "green", "green"],
+      ["red", "red", "red"],
     ];
     setCurrentWater(currentWater);
   } else {
@@ -134,4 +134,5 @@ export const restartGame = () => {
   getCurrentFibonacci(true);
   setCurrentTorches([]);
   getCurrentFibonacci(true);
+  getCurrentWater(true);
 };
