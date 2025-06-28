@@ -23,14 +23,14 @@
 - [x] Create .html files for each room.
 - [x] Create .css files for each room style.
 - [x] Select icons for item inventory and incorporate into Global Footer
-- [ ] Create text content for rooms and hints.
+- [x] Create text content for rooms and hints.
 - [x] Define Puzzles for each room.
 - [x] Define what item will open what door from Home/Labyrinth page.
-- [ ] Build:
+- [x] Build:
 
   - [x] Start page
   - [x] Welcome
-  - [ ] Info / description of game.
+  - [x] Info / description of game.
   - [x] Easy, Med, Hard buttons
   - [x] Start
   - [x] START out with Earth element to open the FIRST Door
@@ -48,21 +48,17 @@ STYLES
 - [x] GLOBAL STYLES / INDEX.html
 - [x] 00 - HOME PAGE
 - [x] EARTH - FIBONACCI
-- [ ] WATER - COLOR SORT
+- [x] WATER - COLOR SORT
 - [x] FIRE - TORCH ROOM
 - [ ] AIR - IMAGE PUZZLE
 
 ## As of 6/25 Project has changed direction to build the Labyrinth per the Group Concious.
 
-See images:
-
-![Labyrinth Map](/assets/to-do/maze-map-v2-min.jpg)
-
-![Room descriptions, conditions, and rules](/assets/to-do/labyrinth-descriptions-min.png)
+### SEE images in README
 
 [x] Map out labyrinth.
 [x] Define items per room.
-[ ] Create Empty Room - html
-[ ] Global Icon controller [arrows]
+[x] Create Empty Room - html
+[x] Global Icon controller [arrows]
 
--ernie 6/25
+-ernie 6/25, 6/27
