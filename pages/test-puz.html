@@ -1,0 +1,74 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=, initial-scale=1.0" />
+    <link rel="stylesheet" href="/css/global-styles.css" />
+    <link rel="stylesheet" href="/css/00-home.css" />
+    <script
+      src="https://kit.fontawesome.com/9186a02cc8.js"
+      crossorigin="anonymous"
+    ></script>
+
+    <title>Labyrinth of Elements</title>
+  </head>
+  <!-- GAME ROOT PAGE // MAIN LABYRINTH // DOOR SELECTION-->
+  <body>
+    <!-- HINT / SOLVE GLOBAL ICONS -->
+    <div class="hint-icon"><i class="fa-solid fa-lightbulb"></i></div>
+    <div class="solve-icon"><i class="fa-solid fa-forward-fast"></i></div>
+
+    <!-- Compass Arrows -->
+    <div class="compass.container">
+      <div class="up-icon"><i class="fa fa-arrow-up"></i></div>
+      <div class="down-icon"><i class="fa fa-arrow-down"></i></div>
+      <div class="left-icon"><i class="fa fa-arrow-left"></i></div>
+      <div class="right-icon"><i class="fa fa-arrow-right"></i></div>
+    </div>
+
+    <!-- PAGE CONTENT CONTAINER -->
+    <div id="page-content" class="door-columns">
+      <!-- LEFT SIDE DOORS -->
+      <div class="door-column left-column">
+        <div class="door-label"><h2>EARTH</h2></div>
+        <a href="/pages/01-earth.html" class="door">
+          <img src="/assets/door-simple.jpg" alt="EARTH" width="170px" />
+        </a>
+        <div class="door-label"><h2>FIRE</h2></div>
+        <a href="/pages/02-torch-room.html" class="door">
+          <img src="/assets/door-simple.jpg" alt="AIR" width="170px" />
+        </a>
+      </div>
+      <!-- MASTER DOOR - NEEDS LINK -->
+      <div class="door-column middle-column">
+        <h1>Labyrinth of Elements</h1>
+        <p>Choose a door to begin your adventure.</p>
+        <img
+          src="/assets/door-master.jpg"
+          alt="MASTER DOOR"
+          width="400px"
+          class="master-door"
+        />
+      </div>
+      <!-- RIGHT SIDE DOORS -->
+      <div class="door-column right-column">
+        <div class="door-label"><h2>AIR</h2></div>
+        <a href="/pages/03-fire.html" class="door">
+          <img src="/assets/door-simple.jpg" alt="FIRE" width="170px" />
+        </a>
+        <div class="door-label"><h2>WATER</h2></div>
+        <a href="/pages/04-water.html" class="door">
+          <img src="/assets/door-simple.jpg" alt="WATER" width="170px" />
+        </a>
+      </div>
+      <!-- END PAGE CONTENT -->
+    </div>
+    <!-- POP UP HINT -->
+    <div class="pop-up-hint"><p>Home page hint.</p></div>
+    <!-- FOOTER -->
+    <footer>
+      <div id="item-inventory"></div>
+    </footer>
+    <script src="../js/footerHandler.js" type="module"></script>
+  </body>
+</html>
