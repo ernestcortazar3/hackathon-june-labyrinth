@@ -43,7 +43,7 @@ const startBtn = document.getElementById("btn-start");
 startBtn.addEventListener("click", () => {
   const difficulty = getGameDifficulty();
   if (difficulty) {
-    window.location.href = "/pages/00-home.html";
+    window.location.href = "/pages/start-room.html";
   } else {
     const warning = document.createElement("div");
     warning.id = "labyrinth-warning";
