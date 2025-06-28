@@ -28,3 +28,12 @@ div.blank-room {
   flex-direction: column;
   gap: 20px;
 }
+
+/* ELEMENTS ROOM */
+
+div.inv-check {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 20px;
+}
