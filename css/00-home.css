@@ -1,6 +1,4 @@
-/* 'HOME' PAGE - DOOR SELECTION */
-
-div#page-content.door-columns {
+div.page-content {
   display: flex;
   flex-direction: row;
   align-items: center;
@@ -9,24 +7,5 @@ div#page-content.door-columns {
   height: 100%;
   background-color: darkslategrey;
   color: white;
-}
-
-.door-column {
-  display: flex;
-  flex-direction: column;
-  flex: 3;
-  align-items: center;
-}
-
-.door-column.middle-column {
-  text-align: center;
-  gap: 10px;
-}
-
-img {
-  margin-bottom: 30px;
-}
-
-img.master-door {
-  border-radius: 40% 40% 10px 10px;
+  font-size: 80px;
 }
