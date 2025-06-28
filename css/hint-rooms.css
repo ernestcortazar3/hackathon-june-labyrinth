@@ -24,3 +24,8 @@ img.image-hint {
 img.image-hint:hover {
   opacity: 0.7;
 }
+
+.water > div {
+  color: skyblue;
+  font-size: 26px;
+}
