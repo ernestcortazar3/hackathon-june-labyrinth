@@ -23,7 +23,7 @@ export const getUserItems = (restarting = false) => {
         name: "wind",
         icon: "fa-wind",
         userHasItem: false,
-        color: " #FFFAFA",
+        color: "#FFFAFA",
       },
       {
         name: "fire",
@@ -128,6 +128,29 @@ export const getCurrentWater = (restarting = false) => {
   return currentWater;
 };
 
+//************************Wind*****************************************/
+
+export const setCurrentTiles = (tiles) => {
+  localStorage.setItem("currentTiles", JSON.stringify(tiles));
+};
+
+/**
+ * get the stored currentTiles or initialized in case is no set or true passed as @param
+ * @param {boolean} restarting
+ * @returns
+ */
+export const getCurrentTiles = (restarting = false) => {
+  const storedTiles = localStorage.getItem("currentTiles");
+  let currentTiles;
+  if (!storedTiles || restarting) {
+    currentTiles = ["04", "01", "03", "07", "", "05", "08", "02", "06"];
+    setCurrentTiles(currentTiles);
+  } else {
+    currentTiles = JSON.parse(storedTiles);
+  }
+  return currentTiles;
+};
+
 export const restartGame = () => {
   localStorage.removeItem("difficulty");
   getUserItems(true);
@@ -135,4 +158,5 @@ export const restartGame = () => {
   setCurrentTorches([]);
   getCurrentFibonacci(true);
   getCurrentWater(true);
+  getCurrentTiles(true);
 };
