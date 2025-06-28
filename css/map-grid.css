@@ -1,0 +1,85 @@
+.map-grid {
+  display: grid;
+  grid-template-columns: 50px 50px 50px 50px 50px;
+  grid-auto-columns: max-content;
+  gap: 0px;
+  border-width: 2px;
+  border-color: black;
+  border-style: solid;
+  width: 250px;
+}
+
+.room {
+  display: inline-block;
+  border-style: solid;
+  border-color: black;
+  border-width: 1px;
+  width: 50px;
+  height: 50px;
+}
+
+.blank-room {
+  background-color: lightgray;
+}
+
+.fire-puz {
+  background-color: seagreen;
+}
+
+.key-hint {
+  background-color: gold;
+  background-blend-mode: lighten;
+}
+
+.finish-room {
+  background-color: lightcoral;
+}
+
+.image-hint {
+  background-color: lightseagreen;
+}
+
+.elements {
+  background-blend-mode: multiply;
+  background-color: orangered;
+}
+
+.key-room {
+  background-color: goldenrod;
+}
+
+.dead-end {
+  background-color: darkslategray;
+}
+
+.water-puz {
+  background-color: blue;
+}
+
+.water-hint {
+  background-color: lightskyblue;
+}
+
+.fib-puz {
+  background-color: purple;
+}
+
+.fib-hint {
+  background-color: lightcoral;
+}
+
+.half-hint {
+  background-color: midnightblue;
+}
+
+.torch-puz {
+  background-color: brown;
+}
+
+.torch-hint {
+  background-color: peru;
+}
+
+.start-room {
+  background-color: green;
+}
