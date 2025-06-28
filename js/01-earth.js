@@ -1,16 +1,14 @@
 import { renderFooter } from "./footerHandler.js";
 import {
-  initFibonacciInput,
   getUserItems,
-  rightFibonacciAnswer,
   setUserItems,
+  getCurrentFibonacci,
+  setCurrentFibonacci,
 } from "./globals.js";
-const currentFibonacciInput =
-  JSON.parse(localStorage.getItem("currentFibonacciInput")) ||
-  initFibonacciInput();
 
-const userItems = getUserItems();
 const container = document.getElementById("page-content");
+const userItems = getUserItems();
+const rightFibonacciAnswer = [3, 5, 8, 13];
 
 //get the total of fibonacci numbers containers
 const spanContainers = document.getElementsByClassName("fib-number-content");
@@ -21,6 +19,7 @@ const spanContainers = document.getElementsByClassName("fib-number-content");
  * @returns true in the input is right
  */
 const checkAnswer = () => {
+  const currentFibonacciInput = getCurrentFibonacci();
   for (let i = 0; i < currentFibonacciInput.length; i++) {
     if (currentFibonacciInput[i] !== rightFibonacciAnswer[i]) {
       return false;
@@ -33,31 +32,50 @@ const checkAnswer = () => {
  * get the actual input stored in local store and init each fibonacci numbers containers
  */
 const initNumbers = () => {
-  if (!checkAnswer()) {
-    for (let i = 0; i < spanContainers.length; i++) {
-      while (spanContainers[i].firstChild) {
-        spanContainers[i].removeChild(spanContainers[i].firstChild);
-      }
-      const span = document.createElement("span");
-      span.id = `fib-number-${i + 1}`;
-      span.innerHTML = currentFibonacciInput[i];
-      spanContainers[i].appendChild(span);
-    }
+  const currentFibonacciInput = getCurrentFibonacci();
+  for (let i = 0; i < spanContainers.length; i++) {
+    spanContainers.innerHTML = "";
+    const span = document.createElement("span");
+    span.id = `fib-number-${i + 1}`;
+    span.innerHTML = currentFibonacciInput[i];
+    spanContainers[i].appendChild(span);
   }
 };
 
-const earthCompletedAndRewarded = () => {
-  const messageAfterGrab = document.createElement("div");
-  messageAfterGrab.classList.add("grab-fire-message");
-  messageAfterGrab.innerHTML = "This test was already passed";
-  container.innerHTML = "";
-  container.appendChild(messageAfterGrab);
+const onIconRewardClick = () => {
+  userItems.find((item) => {
+    return item.name === "leaf";
+  }).userHasItem = true;
+  setUserItems(userItems);
+  earthCompleted();
   renderFooter();
 };
 
-const onIconRewardClick = () => {
-  userItems[2].userHasItem = true;
-  setUserItems(userItems);
+const getElementForAfterComplete = () => {
+  const rewardContainer = document.createElement("div");
+  rewardContainer.id = "leaf-reward-container";
+  rewardContainer.classList.add("reward-container");
+  const rewardIcon = document.createElement("i");
+  rewardIcon.classList.add("fa-solid", "fa-leaf", "reward-Item");
+  rewardIcon.addEventListener("click", () => {
+    onIconRewardClick();
+  });
+  const messageBeforeGrab = document.createElement("div");
+  messageBeforeGrab.classList.add("grab-leaf-message");
+  messageBeforeGrab.innerHTML =
+    "A pattern older than memory weaves through every leaf. You saw it... and the leaf saw you. The element joins your journey.";
+  const messageAfterGrab = document.createElement("div");
+  messageAfterGrab.classList.add("grab-leaf-message");
+  messageAfterGrab.innerHTML = "This test was already passed";
+  const leafItem = userItems.find((item) => item.name === "leaf");
+
+  if (leafItem && leafItem.userHasItem) {
+    rewardContainer.appendChild(messageAfterGrab);
+  } else {
+    rewardContainer.appendChild(rewardIcon);
+    rewardContainer.appendChild(messageBeforeGrab);
+  }
+  return rewardContainer;
 };
 
 /**
@@ -65,16 +83,23 @@ const onIconRewardClick = () => {
  */
 const earthCompleted = () => {
   container.innerHTML = "";
-  const rewardContainer = document.createElement("div");
-  rewardContainer.classList.add("reward-container");
-  const rewardIcon = document.createElement("i");
-  rewardIcon.classList.add("fa-solid", "fa-fire-flame-curved", "reward-Item");
-  rewardIcon.addEventListener("click", onIconRewardClick);
-  const messageBeforeGrab = document.createElement("div");
-  messageBeforeGrab.classList.add("grab-fire-message");
-  messageBeforeGrab.innerHTML = "This test was already passed, grab your price";
-  container.appendChild(rewardIcon);
-  container.appendChild(messageBeforeGrab);
+  container.appendChild(getElementForAfterComplete());
+};
+
+const onClickHandler = (containerPosition, difference) => {
+  const currentFibonacci = getCurrentFibonacci();
+  const numSpan = document.getElementById(
+    `fib-number-${containerPosition + 1}`
+  );
+  const newValue = +numSpan.innerHTML + difference;
+  if (newValue >= 0 && newValue <= 20) {
+    numSpan.innerHTML = newValue;
+    currentFibonacci[containerPosition] = newValue;
+    setCurrentFibonacci(currentFibonacci);
+    if (checkAnswer()) {
+      earthCompleted();
+    }
+  }
 };
 
 /**
@@ -83,43 +108,14 @@ const earthCompleted = () => {
 const addListeners = () => {
   for (let i = 0; i < spanContainers.length; i++) {
     const increaseBtn = document.getElementById(`fib-increase-${i + 1}`);
-    increaseBtn.addEventListener("click", () => {
-      const numSpan = document.getElementById(`fib-number-${i + 1}`);
-      const newValue = +numSpan.innerHTML + 1;
-      currentFibonacciInput[i] = newValue;
-      numSpan.innerHTML = newValue;
-      localStorage.setItem(
-        "currentFibonacciInput",
-        JSON.stringify(currentFibonacciInput)
-      );
-      if (checkAnswer()) {
-        earthCompleted();
-      }
-    });
+    increaseBtn.addEventListener("click", () => onClickHandler(i, 1));
     const decreaseBtn = document.getElementById(`fib-decrease-${i + 1}`);
-    decreaseBtn.addEventListener("click", () => {
-      const numSpan = document.getElementById(`fib-number-${i + 1}`);
-      const currentValue = +numSpan.innerHTML;
-      if (currentValue !== 0) {
-        currentFibonacciInput[i] = currentValue - 1;
-        numSpan.innerHTML = currentValue - 1;
-        localStorage.setItem(
-          "currentFibonacciInput",
-          JSON.stringify(currentFibonacciInput)
-        );
-        if (checkAnswer()) {
-          earthCompleted();
-        }
-      }
-    });
+    decreaseBtn.addEventListener("click", () => onClickHandler(i, -1));
   }
 };
 if (checkAnswer()) {
-  if (userItems[2].userHasItem) {
-    earthCompletedAndRewarded();
-  } else {
-    earthCompleted();
-  }
+  earthCompleted();
+  console.log("game completed");
 } else {
   initNumbers();
   addListeners();

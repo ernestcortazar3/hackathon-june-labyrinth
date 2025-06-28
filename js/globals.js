@@ -17,31 +17,31 @@ export const getUserItems = (restarting = false) => {
         name: "leaf",
         icon: "fa-leaf",
         userHasItem: false,
-        color: "blue",
+        color: "#32CD32",
       },
       {
         name: "wind",
         icon: "fa-wind",
         userHasItem: false,
-        color: "blue",
+        color: " #FFFAFA",
       },
       {
         name: "fire",
         icon: "fa-fire-flame-curved",
         userHasItem: false,
-        color: "blue",
+        color: "#DC143C",
       },
       {
         name: "water",
         icon: "fa-water",
         userHasItem: false,
-        color: "blue",
+        color: "#00BFFF",
       },
       {
         name: "key",
         icon: "fa-key",
         userHasItem: false,
-        color: "blue",
+        color: "#FFD700",
       },
     ];
     setUserItems(userItems);
@@ -60,16 +60,30 @@ export const getGameDifficulty = () => {
   return localStorage.getItem("difficulty");
 };
 
-//************************Fibonaccy************************************* */
-export const rightFibonacciAnswer = [1, 1, 1, 1];
+//************************Fibonacci************************************* */
 
-export const initFibonacciInput = () => {
-  const initialFibonacci = [0, 0, 0, 0];
+export const setCurrentFibonacci = (currentFibonacci) => {
   localStorage.setItem(
     "currentFibonacciInput",
-    JSON.stringify(initialFibonacci)
+    JSON.stringify(currentFibonacci)
   );
-  return initialFibonacci;
+};
+
+/**
+ * get the stored fibonacci or initialized in case is no set or true passed as @param
+ * @param {boolean} restarting
+ * @returns
+ */
+export const getCurrentFibonacci = (restarting = false) => {
+  const storedFibonacci = localStorage.getItem("currentFibonacciInput");
+  let currentFibonacci;
+  if (!storedFibonacci || restarting) {
+    currentFibonacci = [0, 0, 0, 0];
+    setCurrentFibonacci(currentFibonacci);
+  } else {
+    currentFibonacci = JSON.parse(storedFibonacci);
+  }
+  return currentFibonacci;
 };
 
 //************************Torches**************************************** */
@@ -117,7 +131,7 @@ export const getCurrentWater = (restarting = false) => {
 export const restartGame = () => {
   localStorage.removeItem("difficulty");
   getUserItems(true);
-  initFibonacciInput();
+  getCurrentFibonacci(true);
   setCurrentTorches([]);
-  getCurrentWater(true);
+  getCurrentFibonacci(true);
 };
