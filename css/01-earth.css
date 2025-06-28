@@ -2,11 +2,16 @@
 
 /* HEADER AND DESCRIPTION TEXT */
 
-body {
+#page-content {
   background-image: url("/assets/earth-room-wood.jpg");
-  background-repeat: no-repeat;
   background-size: cover;
+  width: 100vw;
+  height: 100vh;
   color: white;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
 }
 
 h1,
@@ -94,4 +99,23 @@ span.hint-text {
 
 .fib-icons i {
   font-size: 4vh;
+}
+
+/* POST PUZZLE */
+div.reward-container {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+.reward-Item {
+  font-size: 60px;
+  color: limegreen;
+  padding-bottom: 20px;
+}
+
+.grab-leaf-message {
+  width: 70%;
+  text-align: center;
+  font-size: 24px;
 }
