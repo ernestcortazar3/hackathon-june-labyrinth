@@ -11,6 +11,10 @@ We are going to create a virtual labyrinth full of puzzles and other misc. obsta
 
 ---
 
+![Labyrinth Map](/assets/to-do/maze-map-v2-min.jpg)
+
+![Room descriptions, conditions, and rules](/assets/to-do/labyrinth-description-v4.png)
+
 ### 👥 Team Members & Roles
 
 | Name    | Role       | GitHub Username    |
