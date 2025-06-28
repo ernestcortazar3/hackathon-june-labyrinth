@@ -7,6 +7,10 @@ div.key-hint {
   flex-direction: column;
   justify-content: center;
   align-items: center;
-  gap: 20px;
   color: snow;
+}
+
+.text-container > div {
+  font-size: 18px;
+  padding: 5px;
 }
