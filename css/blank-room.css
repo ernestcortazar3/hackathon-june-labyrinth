@@ -37,3 +37,21 @@ div.inv-check {
   align-items: center;
   gap: 20px;
 }
+
+/* DEAD END */
+
+div.dead-end {
+  background-image: url(/assets/dead-end-bg.jpg);
+  background-size: cover;
+  width: 100vw;
+  height: 100vh;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  color: snow;
+}
+
+.dead-text {
+  font-size: 64px;
+}
