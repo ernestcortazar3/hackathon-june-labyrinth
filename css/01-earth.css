@@ -2,7 +2,7 @@
 
 /* HEADER AND DESCRIPTION TEXT */
 
-#page-content {
+div.page-content {
   background-image: url("/assets/earth-room-wood.jpg");
   background-size: cover;
   width: 100vw;
