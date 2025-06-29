@@ -5,6 +5,7 @@ import {
   setCurrentTorches,
   setUserItems,
 } from "./globals.js";
+import { tryToUnlock19 } from "./navigation.js";
 
 const rightTorchOrder = [3, 1, 5, 2, 4];
 const userItems = getUserItems();
@@ -39,6 +40,7 @@ const getElementForAfterComplete = () => {
   const fireItem = userItems.find((item) => item.name === "fire");
 
   if (fireItem && fireItem.userHasItem) {
+    tryToUnlock19();
     rewardContainer.appendChild(messageAfterGrab);
   } else {
     rewardContainer.appendChild(rewardIcon);

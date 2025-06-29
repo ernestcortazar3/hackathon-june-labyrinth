@@ -1,6 +1,8 @@
-const rooms = [
+/*const defaultRooms = [
   {
     room: 1,
+    roomType: "blank",
+    wasVisited: false,
     canGoUp: false,
     canGoDown: true,
     canGoLeft: false,
@@ -9,6 +11,8 @@ const rooms = [
   },
   {
     room: 2,
+    roomType: "blank",
+    wasVisited: false,
     canGoUp: false,
     canGoDown: false,
     canGoLeft: true,
@@ -17,22 +21,28 @@ const rooms = [
   },
   {
     room: 3,
+    roomType: "puzzle",
+    wasVisited: false,
     canGoUp: false,
     canGoDown: false,
     canGoLeft: true,
     canGoRight: true,
-    href: "03-fire.html",
+    href: "03-wind.html",
   },
   {
     room: 4,
+    roomType: "canChange",
+    wasVisited: false,
     canGoUp: false,
     canGoDown: false,
     canGoLeft: true,
-    canGoRight: true,
+    canGoRight: false,
     href: "key-hint.html",
   },
   {
     room: 5,
+    roomType: "end",
+    wasVisited: false,
     canGoUp: false,
     canGoDown: false,
     canGoLeft: false,
@@ -41,6 +51,8 @@ const rooms = [
   },
   {
     room: 6,
+    roomType: "hint",
+    wasVisited: false,
     canGoUp: true,
     canGoDown: false,
     canGoLeft: false,
@@ -49,6 +61,8 @@ const rooms = [
   },
   {
     room: 7,
+    roomType: "blank",
+    wasVisited: false,
     canGoUp: false,
     canGoDown: true,
     canGoLeft: true,
@@ -57,6 +71,8 @@ const rooms = [
   },
   {
     room: 8,
+    roomType: "blank",
+    wasVisited: false,
     canGoUp: true,
     canGoDown: false,
     canGoLeft: true,
@@ -65,14 +81,18 @@ const rooms = [
   },
   {
     room: 9,
+    roomType: "canChange",
+    wasVisited: false,
     canGoUp: false,
     canGoDown: false,
     canGoLeft: true,
-    canGoRight: true,
+    canGoRight: false,
     href: "elements.html",
   },
   {
     room: 10,
+    roomType: "puzzle",
+    wasVisited: false,
     canGoUp: false,
     canGoDown: false,
     canGoLeft: true,
@@ -81,6 +101,8 @@ const rooms = [
   },
   {
     room: 11,
+    roomType: "blank",
+    wasVisited: false,
     canGoUp: false,
     canGoDown: true,
     canGoLeft: false,
@@ -89,6 +111,8 @@ const rooms = [
   },
   {
     room: 12,
+    roomType: "puzzle",
+    wasVisited: false,
     canGoUp: true,
     canGoDown: false,
     canGoLeft: false,
@@ -97,6 +121,8 @@ const rooms = [
   },
   {
     room: 13,
+    roomType: "blank",
+    wasVisited: false,
     canGoUp: false,
     canGoDown: false,
     canGoLeft: true,
@@ -105,7 +131,9 @@ const rooms = [
   },
   {
     room: 14,
-    canGoUp: false,
+    roomType: "blank",
+    wasVisited: false,
+    canGoUp: true,
     canGoDown: true,
     canGoLeft: true,
     canGoRight: true,
@@ -113,6 +141,8 @@ const rooms = [
   },
   {
     room: 15,
+    roomType: "hint",
+    wasVisited: false,
     canGoUp: false,
     canGoDown: false,
     canGoLeft: true,
@@ -121,6 +151,8 @@ const rooms = [
   },
   {
     room: 16,
+    roomType: "puzzle",
+    wasVisited: false,
     canGoUp: true,
     canGoDown: true,
     canGoLeft: false,
@@ -129,6 +161,8 @@ const rooms = [
   },
   {
     room: 17,
+    roomType: "blank",
+    wasVisited: false,
     canGoUp: false,
     canGoDown: false,
     canGoLeft: false,
@@ -137,6 +171,8 @@ const rooms = [
   },
   {
     room: 18,
+    roomType: "hint",
+    wasVisited: false,
     canGoUp: false,
     canGoDown: true,
     canGoLeft: true,
@@ -145,6 +181,8 @@ const rooms = [
   },
   {
     room: 19,
+    roomType: "blank",
+    wasVisited: false,
     canGoUp: true,
     canGoDown: true,
     canGoLeft: true,
@@ -153,6 +191,8 @@ const rooms = [
   },
   {
     room: 20,
+    roomType: "puzzle",
+    wasVisited: false,
     canGoUp: false,
     canGoDown: true,
     canGoLeft: true,
@@ -161,6 +201,8 @@ const rooms = [
   },
   {
     room: 21,
+    roomType: "blank",
+    wasVisited: false,
     canGoUp: true,
     canGoDown: false,
     canGoLeft: false,
@@ -169,6 +211,8 @@ const rooms = [
   },
   {
     room: 22,
+    roomType: "blank",
+    wasVisited: false,
     canGoUp: false,
     canGoDown: false,
     canGoLeft: true,
@@ -177,6 +221,8 @@ const rooms = [
   },
   {
     room: 23,
+    roomType: "blank",
+    wasVisited: false,
     canGoUp: true,
     canGoDown: false,
     canGoLeft: true,
@@ -185,6 +231,8 @@ const rooms = [
   },
   {
     room: 24,
+    roomType: "hint",
+    wasVisited: false,
     canGoUp: true,
     canGoDown: false,
     canGoLeft: true,
@@ -193,6 +241,8 @@ const rooms = [
   },
   {
     room: 25,
+    roomType: "blank",
+    wasVisited: false,
     canGoUp: true,
     canGoDown: false,
     canGoLeft: true,
@@ -200,3 +250,26 @@ const rooms = [
     href: "blank-room.html",
   },
 ];
+
+export const setAllRooms = (rooms) => {
+  localStorage.setItem("currentRooms", JSON.stringify(rooms));
+};
+*/
+/**
+ * get the stored rooms or initialized in case is no set or true passed as @param
+ * @param {boolean} restarting
+ * @returns
+ */
+/*
+export const getAllRooms = (restarting = false) => {
+  const storedRooms = localStorage.getItem("currentRooms");
+  let currentRooms;
+  if (!storedRooms || restarting) {
+    currentRooms = defaultRooms;
+    setAllRooms(currentRooms);
+  } else {
+    currentRooms = JSON.parse(storedRooms);
+  }
+  return currentRooms;
+};
+*/

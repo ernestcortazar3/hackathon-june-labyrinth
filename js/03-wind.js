@@ -5,6 +5,7 @@ import {
   setCurrentTiles,
   setUserItems,
 } from "./globals.js";
+import { tryToUnlock9 } from "./navigation.js";
 
 const totalColumns = 3;
 const grid = document.getElementById("wind-grid");
@@ -48,6 +49,7 @@ const getElementForAfterComplete = () => {
   const windItem = userItems.find((item) => item.name === "wind");
 
   if (windItem && windItem.userHasItem) {
+    tryToUnlock9();
     rewardContainer.appendChild(messageAfterGrab);
   } else {
     rewardContainer.appendChild(rewardIcon);
