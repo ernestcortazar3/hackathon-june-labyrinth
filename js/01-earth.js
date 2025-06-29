@@ -5,8 +5,8 @@ import {
   getCurrentFibonacci,
   setCurrentFibonacci,
 } from "./globals.js";
+import { tryToUnlock19, tryToUnlock9 } from "./navigation.js";
 
-const container = document.getElementById("page-content");
 const userItems = getUserItems();
 const rightFibonacciAnswer = [3, 5, 8, 13];
 
@@ -70,6 +70,8 @@ const getElementForAfterComplete = () => {
   const leafItem = userItems.find((item) => item.name === "leaf");
 
   if (leafItem && leafItem.userHasItem) {
+    tryToUnlock19();
+    tryToUnlock9();
     rewardContainer.appendChild(messageAfterGrab);
   } else {
     rewardContainer.appendChild(rewardIcon);
@@ -82,6 +84,7 @@ const getElementForAfterComplete = () => {
  * after puzzle was solved remove digits and fill the container
  */
 const earthCompleted = () => {
+  const container = document.querySelector(".page-content");
   container.innerHTML = "";
   container.appendChild(getElementForAfterComplete());
 };

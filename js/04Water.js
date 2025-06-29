@@ -5,6 +5,7 @@ import {
   setUserItems,
 } from "./globals.js";
 import { renderFooter } from "./footerHandler.js";
+import { tryToUnlock9 } from "./navigation.js";
 
 let selectedRecipe = null;
 const rightAnswer = [
@@ -111,6 +112,7 @@ const getElementForAfterComplete = () => {
   const waterItem = userItems.find((item) => item.name === "water");
 
   if (waterItem && waterItem.userHasItem) {
+    tryToUnlock9();
     rewardContainer.appendChild(messageAfterGrab);
   } else {
     rewardContainer.appendChild(rewardIcon);

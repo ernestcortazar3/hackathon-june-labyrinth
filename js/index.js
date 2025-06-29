@@ -1,4 +1,6 @@
 import {
+  getAllRooms,
+  getCurrentRoom,
   getGameDifficulty,
   restartGame,
   setGameDifficulty,
@@ -43,7 +45,10 @@ const startBtn = document.getElementById("btn-start");
 startBtn.addEventListener("click", () => {
   const difficulty = getGameDifficulty();
   if (difficulty) {
-    window.location.href = "/pages/start-room.html";
+    console.log("event triggered");
+    const currentRoom = getCurrentRoom();
+    const allRooms = getAllRooms();
+    window.location.href = `pages/${allRooms[+currentRoom - 1].href}`;
   } else {
     const warning = document.createElement("div");
     warning.id = "labyrinth-warning";
