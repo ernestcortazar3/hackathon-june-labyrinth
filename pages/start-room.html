@@ -6,6 +6,7 @@
     <title>Start</title>
     <link rel="stylesheet" href="/css/global-styles.css" />
     <link rel="stylesheet" href="/css/start.css" />
+    <link rel="stylesheet" href="/css/modal-map.css" />
     <script
       src="https://kit.fontawesome.com/9186a02cc8.js"
       crossorigin="anonymous"
@@ -54,53 +55,58 @@
               🧩 Solve the ancient challenge. Win an item. Unlock the next tier
               of the mystery.
             </div>
-            </div>
-          </div>
-          <!-- POP UP 03 -->
-          <div class="panel hidden" id="panel-3">
-            <h1>How to Survive the Labyrinth of Elements</h1>
-            <h2>🗺️ Map Icon</h2>
-            <div>
-              Click the map icon at any time to open a magical diagram of rooms
-              you've visited.
-            </div>
-            <span class="center">But beware:</span>
-            <div>
-              the map only reveals where you've been—never where you're going.
-            </div>
-          </div>
-          <!-- POP UP 04 -->
-          <div class="panel hidden" id="panel-4">
-            <h1>How to Survive the Labyrinth of Elements</h1>
-            <h2>🪄 Artifacts</h2>
-            <div>The Puzzle-Rooms will reward you with Elemental Items.</div>
-            <div>
-              These mystical keys unlock sealed rooms elsewhere in the
-              Labyrinth. Keep track of them... they are your only way forward.
-            </div>
-          </div>
-          <!-- POP UP 05 -->
-          <div class="panel hidden" id="panel-5">
-            <h1>How to Survive the Labyrinth of Elements</h1>
-            <h2>🚪 Escape...?</h2>
-            <div>
-              Legend says there is a final chamber where all elements converge.
-              Only those who possess the full set of sacred items may pass
-              through it.
-            </div>
-            <div>
-              Will you reach it? <br />
-              Or will the Labyrinth claim you?
-            </div>
-            <div>
-              <button class="begin" onclick="closePopup()">BEGIN</button>
-            </div>
-          </div>
-          <div class="popup-controls">
-            <button id="backBtn">Back</button>
-            <button id="nextBtn">Next</button>
           </div>
         </div>
+        <!-- POP UP 03 -->
+        <div class="panel hidden" id="panel-3">
+          <h1>How to Survive the Labyrinth of Elements</h1>
+          <h2>🗺️ Map Icon</h2>
+          <div>
+            Click the map icon at any time to open a magical diagram of rooms
+            you've visited.
+          </div>
+          <span class="center">But beware:</span>
+          <div>
+            the map only reveals where you've been—never where you're going.
+          </div>
+        </div>
+        <!-- POP UP 04 -->
+        <div class="panel hidden" id="panel-4">
+          <h1>How to Survive the Labyrinth of Elements</h1>
+          <h2>🪄 Artifacts</h2>
+          <div>The Puzzle-Rooms will reward you with Elemental Items.</div>
+          <div>
+            These mystical keys unlock sealed rooms elsewhere in the Labyrinth.
+            Keep track of them... they are your only way forward.
+          </div>
+        </div>
+        <!-- POP UP 05 -->
+        <div class="panel hidden" id="panel-5">
+          <h1>How to Survive the Labyrinth of Elements</h1>
+          <h2>🚪 Escape...?</h2>
+          <div>
+            Legend says there is a final chamber where all elements converge.
+            Only those who possess the full set of sacred items may pass through
+            it.
+          </div>
+          <div>
+            Will you reach it? <br />
+            Or will the Labyrinth claim you?
+          </div>
+          <div>
+            <button class="begin" onclick="closePopup()">BEGIN</button>
+          </div>
+        </div>
+        <div class="popup-controls">
+          <button id="backBtn">Back</button>
+          <button id="nextBtn">Next</button>
+        </div>
+      </div>
+    </div>
+    <!-- modal map -->
+    <div id="modal-map" class="modal-map-overlay">
+      <div class="modal-map-content">
+        <iframe src="map-grid.html"></iframe>
       </div>
     </div>
     <footer>
@@ -108,5 +114,6 @@
     </footer>
     <script src="../js/footerHandler.js" type="module"></script>
     <script src="../js/navigation.js" type="module"></script>
+    <script src="../js/mapModalHandler.js" type="module"></script>
   </body>
 </html>

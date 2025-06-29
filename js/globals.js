@@ -246,7 +246,7 @@ const defaultRooms = [
   },
   {
     room: 10,
-    roomType: "puzzle",
+    roomType: "key",
     wasVisited: false,
     canGoUp: false,
     canGoDown: false,
@@ -336,7 +336,7 @@ const defaultRooms = [
   },
   {
     room: 19,
-    roomType: "blank",
+    roomType: "canChange",
     wasVisited: false,
     canGoUp: false,
     canGoDown: true,
@@ -366,8 +366,8 @@ const defaultRooms = [
   },
   {
     room: 22,
-    roomType: "blank",
-    wasVisited: false,
+    roomType: "start",
+    wasVisited: true,
     canGoUp: false,
     canGoDown: false,
     canGoLeft: true,

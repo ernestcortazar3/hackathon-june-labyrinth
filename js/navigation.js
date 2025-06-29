@@ -25,6 +25,7 @@ const goToNextRoom = (amountToAdd) => {
     return room.room === newRoomNumber;
   });
   newRoom.wasVisited = true;
+  setAllRooms(allRooms);
   window.location.href = `${newRoom.href}`;
 };
 
