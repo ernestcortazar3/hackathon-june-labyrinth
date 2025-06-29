@@ -18,68 +18,28 @@
   height: 50px;
 }
 
+.not-visited-room {
+  background-color: black;
+}
+
+.current-room {
+  background-color: red;
+}
 .blank-room {
   background-color: lightgray;
 }
 
-.fire-puz {
+.puzzle-room {
   background-color: seagreen;
 }
 
-.key-hint {
-  background-color: gold;
-  background-blend-mode: lighten;
-}
-
-.finish-room {
-  background-color: lightcoral;
-}
-
-.image-hint {
+.hint-room {
   background-color: lightseagreen;
-}
-
-.elements {
-  background-blend-mode: multiply;
-  background-color: orangered;
 }
 
 .key-room {
   background-color: goldenrod;
 }
-
-.dead-end {
-  background-color: darkslategray;
-}
-
-.water-puz {
-  background-color: blue;
-}
-
-.water-hint {
-  background-color: lightskyblue;
-}
-
-.fib-puz {
-  background-color: purple;
-}
-
-.fib-hint {
-  background-color: lightcoral;
-}
-
-.half-hint {
-  background-color: midnightblue;
-}
-
-.torch-puz {
-  background-color: brown;
-}
-
-.torch-hint {
-  background-color: peru;
-}
-
 .start-room {
   background-color: green;
 }

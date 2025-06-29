@@ -1,0 +1,27 @@
+.modal-map-overlay {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100vw;
+  height: 100vh;
+  background: rgba(0, 0, 0, 0.5);
+  display: none; /* hidden by default */
+  justify-content: center;
+  align-items: center;
+  z-index: 1000;
+}
+
+.modal-map-content {
+  background: white;
+  border-radius: 8px;
+  overflow: hidden;
+}
+
+.modal-map-content iframe {
+  display: block;
+  border: none;
+
+  /* Set your desired content size here */
+  width: 400px;
+  height: 400px;
+}

@@ -5,6 +5,7 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <link rel="stylesheet" href="/css/global-styles.css" />
     <link rel="stylesheet" href="/css/hint-rooms.css" />
+    <link rel="stylesheet" href="/css/modal-map.css" />
     <script
       src="https://kit.fontawesome.com/9186a02cc8.js"
       crossorigin="anonymous"
@@ -31,11 +32,18 @@
         <div>End with fire's subtle gleam.</div>
         <div>Reverse the path to reach the dream.</div>
       </div>
-      <!-- FOOTER -->
-      <footer>
-        <div id="item-inventory"></div>
-      </footer>
-      <script src="../js/footerHandler.js" type="module"></script>
+      <!-- modal map -->
+      <div id="modal-map" class="modal-map-overlay">
+        <div class="modal-map-content">
+          <iframe src="map-grid.html"></iframe>
+        </div>
+      </div>
     </div>
+    <!-- FOOTER -->
+    <footer>
+      <div id="item-inventory"></div>
+    </footer>
+    <script src="../js/mapModalHandler.js" type="module"></script>
+    <script src="../js/footerHandler.js" type="module"></script>
   </body>
 </html>

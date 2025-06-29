@@ -6,6 +6,7 @@
     <title>The Fire Room</title>
     <link rel="stylesheet" href="../css/03-wind.css" />
     <link rel="stylesheet" href="../css/global-styles.css" />
+    <link rel="stylesheet" href="/css/modal-map.css" />
     <script
       src="https://kit.fontawesome.com/9186a02cc8.js"
       crossorigin="anonymous"
@@ -32,9 +33,16 @@
         tabindex="0"
       ></div>
     </div>
+    <!-- modal map -->
+    <div id="modal-map" class="modal-map-overlay">
+      <div class="modal-map-content">
+        <iframe src="map-grid.html"></iframe>
+      </div>
+    </div>
     <footer>
       <div id="item-inventory"></div>
     </footer>
+    <script src="../js/mapModalHandler.js" type="module"></script>
     <script src="../js/03-wind.js" type="module"></script>
     <script src="../js/footerHandler.js" type="module"></script>
   </body>
