@@ -24,7 +24,8 @@ h2 {
 }
 
 p,
-div {
+div,
+button {
   font-family: "Libre Baskerville", Geneva, Tahoma, sans-serif;
 }
 
