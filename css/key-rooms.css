@@ -15,6 +15,17 @@ div.key-hint {
 .text-container > div {
   font-size: 18px;
   padding: 5px;
+  .image-hint-text {
+    color: darkred;
+    text-align: center;
+    text-rendering: optimizeLegibility;
+    justify-content: center;
+    margin-left: 100px;
+    margin-right: 100px;
+    margin-top: 75px;
+    font-family: "Creepster", sans-serif;
+    gap: 0px;
+  }
 }
 
 /* KEY ROOM */
