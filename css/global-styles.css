@@ -24,7 +24,8 @@ h2 {
 }
 
 p,
-div {
+div,
+button {
   font-family: "Libre Baskerville", Geneva, Tahoma, sans-serif;
 }
 
@@ -50,11 +51,10 @@ img {
 .solve-icon,
 .map-icon {
   position: fixed;
-  right: 20px;
-  color: rgb(145, 145, 145);
-  font-size: 32px;
-  width: 35px;
-  height: 35px;
+  right: 50px;
+  color: rgb(145, 145, 145, 0.8);
+  font-size: 70px;
+  width: 70px;
   text-align: center;
 }
 
@@ -69,11 +69,11 @@ img {
 }
 
 .hint-icon {
-  top: 80px;
+  top: 100px;
 }
 
 .solve-icon {
-  top: 140px;
+  top: 175px;
 }
 
 /* Navigation Icons */
@@ -86,11 +86,9 @@ img {
 .left-icon,
 .right-icon {
   position: fixed;
-  left: 55px;
+  left: 80px;
   color: rgb(145, 145, 145);
-  font-size: 48px;
-  width: 50px;
-  height: 50px;
+  font-size: 70px;
   text-align: center;
 }
 .up-icon:hover,
@@ -105,17 +103,17 @@ img {
 }
 
 .down-icon {
-  top: 66px;
+  top: 120px;
 }
 
 .left-icon {
-  left: 32px;
-  top: 42px;
+  left: 20px;
+  top: 80px;
 }
 
 .right-icon {
-  left: 78px;
-  top: 42px;
+  left: 130px;
+  top: 80px;
 }
 
 /* POP UP HINT WINDOW */
@@ -172,7 +170,7 @@ div.item {
   height: 60px;
   font-size: 60px;
   text-align: center;
-  color: #ccc;
+  color: rgb(204, 204, 204, 0.5);
   text-shadow: 2px 2px 5px rgba(0, 0, 0, 0.5);
 }
 

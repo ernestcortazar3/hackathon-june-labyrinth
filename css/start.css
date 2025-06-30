@@ -22,7 +22,7 @@ div.room {
   justify-content: center;
 }
 
-.popup {
+#popup {
   width: 70%;
   height: 70%;
   flex-direction: column;
@@ -33,32 +33,38 @@ div.room {
   border-radius: 20px;
 }
 
-.panel > div {
-  margin-top: 50px;
-  font-size: 20px;
-}
-
-.center {
-  margin-top: 50px;
-  font-size: 20px;
+div.popup-content {
+  height: 80%;
+  display: flex;
+  flex: column;
+  align-items: space-between;
+  justify-content: center;
+  gap: 50px;
 }
 
 h1,
 h2,
 .center,
 .panel > div {
-  height: 15%;
-  margin-top: 20px;
+  height: 25%;
   display: flex;
   justify-content: center;
   align-items: center;
   text-align: center;
-  width: 100%;
+}
+
+h2 > div {
+  padding: 0 20px;
+  font-size: 60px;
+}
+
+p.just-left {
+  padding: 0 30px;
 }
 
 button {
-  width: 80px;
-  height: 40px;
+  width: 120px;
+  height: 50px;
   border-radius: 10px;
   background-color: rgb(184, 182, 182);
 }
@@ -68,12 +74,13 @@ button:hover {
 }
 
 .popup-controls {
+  height: 20%;
   display: flex;
   flex-direction: row;
   position: relative;
-  margin-top: 200px;
   align-items: center;
   justify-content: center;
+  gap: 20px;
 }
 
 #backBtn {
@@ -90,4 +97,9 @@ button:hover {
   height: 40px;
   border-radius: 10px;
   background-color: rgb(184, 182, 182);
+}
+
+#backBtn:hover,
+#nextBtn:hover {
+  background-color: snow;
 }
