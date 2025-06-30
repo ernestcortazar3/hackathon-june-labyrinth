@@ -45,7 +45,6 @@ const startBtn = document.getElementById("btn-start");
 startBtn.addEventListener("click", () => {
   const difficulty = getGameDifficulty();
   if (difficulty) {
-    console.log("event triggered");
     const currentRoom = getCurrentRoom();
     const allRooms = getAllRooms();
     window.location.href = `pages/${allRooms[+currentRoom - 1].href}`;

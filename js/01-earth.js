@@ -83,7 +83,7 @@ const getElementForAfterComplete = () => {
 /**
  * after puzzle was solved remove digits and fill the container
  */
-const earthCompleted = () => {
+export const earthCompleted = () => {
   const container = document.querySelector(".page-content");
   container.innerHTML = "";
   container.appendChild(getElementForAfterComplete());
@@ -118,7 +118,6 @@ const addListeners = () => {
 };
 if (checkAnswer()) {
   earthCompleted();
-  console.log("game completed");
 } else {
   initNumbers();
   addListeners();
