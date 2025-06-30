@@ -1,8 +1,29 @@
+div.page-content {
+  background-image: url(/assets/air-room-bg.jpg);
+  background-size: cover;
+  width: 100vw;
+  height: 100vh;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+}
+
+header > h1 {
+  text-shadow: none;
+  font-size: 69px;
+}
+
+p {
+  text-align: center;
+}
+
 .wind-container {
   display: flex;
   flex-direction: column;
   align-items: center;
   justify-content: center;
+  gap: 20px;
   max-width: 40vw;
   margin: auto;
 }
@@ -15,6 +36,7 @@
   height: 20em;
   gap: 1px;
   border: 2px solid black;
+  background-color: snow;
 }
 
 .grid-slot {
@@ -23,4 +45,23 @@
   background-repeat: no-repeat;
   width: 100%;
   height: 100%;
+}
+
+/* POST PUZZLE */
+div.reward-container {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+.reward-Item {
+  font-size: 60px;
+  color: snow;
+  padding-bottom: 20px;
+  text-shadow: 2px 2px 5px black;
+}
+
+.grab-wind-message {
+  text-align: center;
+  font-size: 24px;
 }
