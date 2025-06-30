@@ -22,10 +22,16 @@ p {
 
 h1 {
   font-size: 3vw;
+  padding: 0 250px;
 }
 
-p {
+p,
+span.hint-text {
   font-size: 1.5vw;
+}
+
+span.hint-text {
+  text-shadow: 2px 2px 3px black;
 }
 
 /* GROUP CONTAINER - [.elevated > global-styles.css] - HOLDS "CARDS" */
@@ -36,7 +42,6 @@ p {
   align-items: center;
   width: 90%;
   height: 50vh;
-  /* background-color: rgba(137, 109, 80, 0.5); */
   border-radius: 20px;
   align-items: center;
 }
@@ -50,13 +55,9 @@ p {
   height: 80%;
   justify-content: center;
   align-items: center;
-  background-color: rgba(137, 109, 80, 0.5);
+  background-color: rgba(137, 109, 80);
   border-radius: 20px;
   margin: 20px;
-}
-
-span.hint-text {
-  font-size: 28px;
 }
 
 /* NUMBER CONTENT */
@@ -71,7 +72,7 @@ span.hint-text {
   font-size: 5vh;
 }
 
-/* ICONS // BUTTONS */
+/* PLUS / MINUS BUTTONS */
 
 .fib-icons {
   display: flex;
@@ -83,8 +84,9 @@ span.hint-text {
 
 .fib-number-content,
 .fib-icons {
-  background-color: rgba(137, 109, 80, 0.5);
+  background-color: rgba(182, 146, 108);
   box-shadow: inset 5px 5px 5px black;
+  text-shadow: 2px 2px 3px black;
 }
 
 .fib-icons > button {
