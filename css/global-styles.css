@@ -86,11 +86,11 @@ img {
 .left-icon,
 .right-icon {
   position: fixed;
-  left: 55px;
+  left: 80px;
   color: rgb(145, 145, 145);
-  font-size: 48px;
-  width: 50px;
-  height: 50px;
+  font-size: 72px;
+  width: 60px;
+  height: 60px;
   text-align: center;
 }
 .up-icon:hover,
@@ -105,17 +105,17 @@ img {
 }
 
 .down-icon {
-  top: 66px;
+  top: 120px;
 }
 
 .left-icon {
-  left: 32px;
-  top: 42px;
+  left: 20px;
+  top: 80px;
 }
 
 .right-icon {
-  left: 78px;
-  top: 42px;
+  left: 130px;
+  top: 80px;
 }
 
 /* POP UP HINT WINDOW */
