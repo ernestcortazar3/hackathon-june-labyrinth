@@ -206,6 +206,8 @@ div.item.active {
 /* INDEX PAGE */
 
 div#index-page {
+  background-image: url(/assets/index-bg.jpg);
+  background-size: cover;
   display: flex;
   flex-direction: column;
   justify-content: center;
@@ -304,5 +306,16 @@ button.difficulty-button {
 }
 
 #btn-start:hover {
+  background-color: rgb(239, 239, 239);
+}
+
+#btn-restart-game {
+  margin-top: 20px;
+  background-color: rgb(222, 222, 222, 0.7);
+  width: 130px;
+  height: 25px;
+  border-radius: 10px;
+}
+#btn-restart-game:hover {
   background-color: rgb(239, 239, 239);
 }
