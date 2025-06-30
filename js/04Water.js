@@ -19,17 +19,14 @@ const checkAnswer = () => {
   const currentWater = getCurrentWater();
   for (let i = 0; i < rightAnswer.length; i++) {
     if (rightAnswer[i].length !== currentWater[i].length) {
-      console.log("puzzle nooottt completeed");
       return false;
     }
     for (let j = 0; j < rightAnswer[i].length; j++) {
       if (rightAnswer[i][j] !== currentWater[i][j]) {
-        console.log("puzzle nooottt completeed");
         return false;
       }
     }
   }
-  console.log("puzzle completeed");
   return true;
 };
 
@@ -124,7 +121,7 @@ const getElementForAfterComplete = () => {
 /**
  * after puzzle was solved remove liquid containers and fill the container
  */
-const waterCompleted = () => {
+export const waterCompleted = () => {
   const container = document.getElementById("liq-puzzle-container");
   container.innerHTML = "";
   container.appendChild(getElementForAfterComplete());
@@ -134,5 +131,4 @@ if (checkAnswer()) {
   waterCompleted();
 } else {
   drawContainers();
-  console.log("puzzle noooottttt completeed");
 }

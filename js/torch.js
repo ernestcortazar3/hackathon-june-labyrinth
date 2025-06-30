@@ -12,7 +12,6 @@ const userItems = getUserItems();
 getCurrentTorches();
 
 const onIconRewardClick = () => {
-  console.log("icon clicked");
   userItems.find((item) => {
     return item.name === "fire";
   }).userHasItem = true;
@@ -52,7 +51,7 @@ const getElementForAfterComplete = () => {
 /**
  * after puzzle was solved remove torches and fill the container
  */
-const fireCompleted = () => {
+export const fireCompleted = () => {
   const torchContainer = document.getElementById("torches-container");
   const textContainer = document.getElementById("torches-text-container");
   const fireRewardContainer = document.getElementById("fire-reward-container");

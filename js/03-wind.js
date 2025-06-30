@@ -13,7 +13,7 @@ const grid = document.getElementById("wind-grid");
 /**
  * after puzzle was solved remove digits and fill the container
  */
-const windCompleted = () => {
+export const windCompleted = () => {
   const container = document.getElementById("wind-container");
   container.innerHTML = "";
   container.appendChild(getElementForAfterComplete());
