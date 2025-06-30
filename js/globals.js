@@ -116,10 +116,10 @@ export const getCurrentWater = (restarting = false) => {
   let currentWater;
   if (!storedWater || restarting) {
     currentWater = [
-      ["red"],
-      ["blue", "blue", "blue", "blue"],
-      ["green", "green", "green", "green"],
-      ["red", "red", "red"],
+      ["red", "blue", "green"],
+      ["red", "blue", "green"],
+      ["red", "blue", "green"],
+      ["red", "blue", "green"],
     ];
     setCurrentWater(currentWater);
   } else {
