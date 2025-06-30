@@ -13,6 +13,10 @@
 
 .modal-map-content {
   background: white;
+  background-image: url("../assets/old-parchment-paper-scroll-sheet-vintage-aged-or-texture-background-png.png");
+  background-size: 90%;
+  background-repeat: no-repeat;
+  background-position: center;
   border-radius: 8px;
   overflow: hidden;
 }
