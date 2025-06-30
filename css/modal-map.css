@@ -5,7 +5,7 @@
   width: 100vw;
   height: 100vh;
   background: rgba(0, 0, 0, 0.5);
-  display: none; /* hidden by default */
+  display: none;
   justify-content: center;
   align-items: center;
   z-index: 1000;
@@ -20,8 +20,6 @@
 .modal-map-content iframe {
   display: block;
   border: none;
-
-  /* Set your desired content size here */
   width: 400px;
-  height: 400px;
+  height: 460px;
 }
