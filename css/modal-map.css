@@ -13,7 +13,7 @@
 
 .modal-map-content {
   background-image: url("../assets/old-parchment-paper-for-map.png");
-  background-color: lightgray;
+  background-color: transparent;
   background-size: 90%;
   background-repeat: no-repeat;
   background-position: center;

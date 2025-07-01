@@ -15,12 +15,10 @@ if (restartBtn) {
 }
 
 const easyBtn = document.getElementById("btn-easy");
-const mediumBtn = document.getElementById("btn-medium");
 const hardBtn = document.getElementById("btn-hard");
 
 const removeActiveClass = () => {
   easyBtn.classList.remove("active");
-  mediumBtn.classList.remove("active");
   hardBtn.classList.remove("active");
 };
 
@@ -28,11 +26,6 @@ easyBtn.addEventListener("click", () => {
   setGameDifficulty("easy");
   removeActiveClass();
   easyBtn.classList.add("active");
-});
-mediumBtn.addEventListener("click", () => {
-  setGameDifficulty("medium");
-  removeActiveClass();
-  mediumBtn.classList.add("active");
 });
 hardBtn.addEventListener("click", () => {
   setGameDifficulty("hard");
