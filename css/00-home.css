@@ -11,14 +11,22 @@ div.page-content {
   gap: 20px;
 }
 
-p {
-  width: 600px;
+div.wait {
+  font-size: 56px;
+  margin-bottom: 50px;
+}
+
+div.text-box {
+  display: flex;
+  flex-direction: column;
+  text-align: center;
+  gap: 20px;
 }
 
 table {
-  position: absolute;
-  bottom: 50px;
+  margin-top: 50px;
 }
+
 caption {
   font-size: small;
   text-decoration: underline;
