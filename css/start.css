@@ -36,9 +36,9 @@ div.room {
 div.popup-content {
   height: 80%;
   display: flex;
-  flex: column;
-  align-items: space-between;
-  justify-content: center;
+  flex-direction: column;
+  align-items: center;
+  justify-content: space-evenly;
   gap: 50px;
 }
 
@@ -49,7 +49,9 @@ div.instruction-break {
 div.icon-container {
   display: flex;
 }
-
+div.panel {
+  height: 100%;
+}
 h1,
 h2,
 .center,
@@ -61,7 +63,6 @@ h2,
   text-align: center;
 }
 
-h2 > div,
 div.icon-instruction {
   padding: 0 20px;
   font-size: 50px;
@@ -74,14 +75,10 @@ p.just-left {
 span.easy {
   color: limegreen;
 }
-span.medium {
-  color: yellow;
-}
 span.hard {
   color: crimson;
 }
 span.easy,
-span.medium,
 span.hard {
   padding: 0 10px;
 }

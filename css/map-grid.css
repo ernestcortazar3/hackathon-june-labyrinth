@@ -1,7 +1,6 @@
 .map-grid {
   display: grid;
   margin-top: 20px;
-  /* margin-left: 17px; */
   grid-template-columns: 50px 50px 50px 50px 50px;
   grid-auto-columns: max-content;
   gap: 0px;
@@ -55,11 +54,9 @@
 }
 
 #legend {
-  /* margin-left: 20px; */
   width: 250px;
   height: 100px;
   gap: 0px;
-  /* margin-bottom: 20px; */
 }
 
 #legend-row-container {
