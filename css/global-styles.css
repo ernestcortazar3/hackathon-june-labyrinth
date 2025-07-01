@@ -47,18 +47,19 @@ img {
 
 /* HINT / SOLVE / MAP GLOBAL ICONS */
 
-.hint-icon,
+.home-icon,
 .solve-icon,
 .map-icon {
   position: fixed;
   right: 50px;
   color: rgb(145, 145, 145, 0.8);
-  font-size: 70px;
-  width: 70px;
+  font-size: 60px;
+  width: 75px;
+  height: 75px;
   text-align: center;
 }
 
-.hint-icon:hover,
+.home-icon:hover,
 .solve-icon:hover,
 .map-icon:hover {
   color: snow;
@@ -68,12 +69,12 @@ img {
   top: 20px;
 }
 
-.hint-icon {
+.home-icon {
   top: 100px;
 }
 
 .solve-icon {
-  top: 175px;
+  top: 185px;
 }
 
 /* Navigation Icons */
@@ -194,14 +195,6 @@ div.item.active {
   text-transform: uppercase;
   font-size: 32px;
 }
-
-/* #easy {
-  display: none;
-}
-
-#medium {
-  display: none;
-} */
 
 /* INDEX PAGE */
 
