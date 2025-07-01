@@ -6,6 +6,7 @@
     <link rel="stylesheet" href="/css/04-water.css" />
     <link rel="stylesheet" href="/css/global-styles.css" />
     <link rel="stylesheet" href="/css/modal-map.css" />
+    
     <script
       src="https://kit.fontawesome.com/9186a02cc8.js"
       crossorigin="anonymous"
@@ -16,6 +17,10 @@
   <body>
     <!-- Global Icons -->
     <div class="map-icon"><i class="fa-solid fa-map"></i></div>
+    <a href="/"
+      ><div class="home-icon">
+        <i class="fa-solid fa-house-chimney"></i></div
+    ></a>
     <div class="solve-icon"><i class="fa-solid fa-forward-fast"></i></div>
     <!-- Compass Arrows -->
     <div class="up-icon"><i class="fa fa-arrow-up"></i></div>
@@ -23,15 +28,16 @@
     <div class="left-icon"><i class="fa fa-arrow-left"></i></div>
     <div class="right-icon"><i class="fa fa-arrow-right"></i></div>
 
-    <div id="page-content">
-      <h1>Sort the colors to proceed.</h1>
-      <h1>Welcome to the Water Room</h1>
-      <h2>Sort the colors in the test tubes to proceed.</h2>
-      <p>
-        Select one "container" and then click a second "container" to move the
-        top color to the second container.
-      </p>
-      <div id="liq-puzzle-container" class="container"></div>
+    <div class="page-content">
+      <div class="water-title">Welcome to the Water Room</div>
+      <div id="short-instruct">Sort the colors to proceed.</div>
+      <div>Sort the colors in the test tubes to proceed.<div>
+        <p>
+          Select one "container" and then click a second "container" to move the
+          top color to the second container.
+        </p>
+      </div>
+      <div id="liq-puzzle-container" class="liq-puz-contain container"></div>
     </div>
     <!-- modal map -->
     <div id="modal-map" class="modal-map-overlay">
