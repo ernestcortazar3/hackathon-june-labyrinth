@@ -3,6 +3,7 @@ body {
   background-repeat: no-repeat;
   background-size: cover;
 }
+
 div.page-content {
   display: flex;
   flex-direction: column;
@@ -10,6 +11,7 @@ div.page-content {
   justify-content: center;
   align-items: center;
 }
+
 .water-title {
   text-align: center;
   font-size: 48px;
@@ -24,6 +26,7 @@ p {
   font-weight: 700;
   color: white;
 }
+
 div.water-title,
 p {
   width: 80%;
