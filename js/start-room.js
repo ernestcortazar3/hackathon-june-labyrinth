@@ -1,5 +1,5 @@
 let currentPanel = 1;
-const totalPanels = 5;
+const totalPanels = 6;
 
 const showPanel = (index) => {
   for (let i = 1; i <= totalPanels; i++) {
