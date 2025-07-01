@@ -42,6 +42,14 @@ div.popup-content {
   gap: 50px;
 }
 
+div.instruction-break {
+  display: flex;
+  flex-direction: column;
+}
+div.icon-container {
+  display: flex;
+}
+
 h1,
 h2,
 .center,
@@ -53,13 +61,29 @@ h2,
   text-align: center;
 }
 
-h2 > div {
+h2 > div,
+div.icon-instruction {
   padding: 0 20px;
-  font-size: 60px;
+  font-size: 50px;
 }
 
 p.just-left {
   padding: 0 30px;
+}
+
+span.easy {
+  color: limegreen;
+}
+span.medium {
+  color: yellow;
+}
+span.hard {
+  color: crimson;
+}
+span.easy,
+span.medium,
+span.hard {
+  padding: 0 10px;
 }
 
 button {
