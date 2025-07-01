@@ -95,9 +95,6 @@ div.reward-container {
   flex-direction: column;
   align-items: center;
   justify-content: center;
-  position: fixed;
-  margin-top: 100px;
-  margin-left: 180px;
 }
 
 .reward-Item {
@@ -109,7 +106,7 @@ div.reward-container {
 }
 
 .grab-water-message {
-  display: block;
+  width: 600px;
   text-align: center;
   font-size: 24px;
   color: white;
