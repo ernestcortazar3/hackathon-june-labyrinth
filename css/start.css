@@ -1,5 +1,5 @@
 div.room {
-  background-image: url("/assets/start-room-bg.jpg");
+  background-image: url("./../assets/start-room-bg.jpg");
   background-size: cover;
   width: 100vw;
   height: 100vh;

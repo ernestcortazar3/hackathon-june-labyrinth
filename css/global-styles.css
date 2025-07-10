@@ -199,7 +199,7 @@ div.item.active {
 /* INDEX PAGE */
 
 div#index-page {
-  background-image: url(/assets/index-bg.jpg);
+  background-image: url(./../assets/index-bg.jpg);
   background-size: cover;
   display: flex;
   flex-direction: column;

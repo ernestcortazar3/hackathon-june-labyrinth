@@ -1,5 +1,5 @@
 body {
-  background-image: url("../assets/water-room-sewer.jpg");
+  background-image: url("./../assets/water-room-sewer.jpg");
   background-repeat: no-repeat;
   background-size: cover;
 }

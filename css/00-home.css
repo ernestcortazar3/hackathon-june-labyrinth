@@ -1,5 +1,5 @@
 div.page-content {
-  background-image: url(/assets/finish-bg.jpg);
+  background-image: url(./../assets/finish-bg.jpg);
   background-size: cover;
   width: 100vw;
   height: 100vh;
